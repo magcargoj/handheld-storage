@@ -1,0 +1,26 @@
+{
+  "uhs1": [
+    { "cap": 256, "name": "Samsung EVO 256GB", "link": "https://amazon.com/YOUR_LINK_HERE" },
+    { "cap": 512, "name": "Samsung EVO 512GB", "link": "https://amazon.com/YOUR_LINK_HERE" },
+    { "cap": 1024, "name": "SanDisk Extreme 1TB", "link": "https://amazon.com/YOUR_LINK_HERE" }
+  ],
+  "uhs2": [
+    { "cap": 512, "name": "Lexar Gold 512GB (UHS-II)", "link": "https://amazon.com/YOUR_LINK_HERE" }
+  ],
+  "express": [
+    { "cap": 256, "name": "Samsung Express 256GB", "link": "https://amazon.com/YOUR_LINK_HERE" },
+    { "cap": 512, "name": "SanDisk Express 512GB", "link": "https://amazon.com/YOUR_LINK_HERE" }
+  ],
+  "2230": [
+    { "cap": 1024, "name": "Corsair Mini 1TB (2230)", "link": "https://amazon.com/YOUR_LINK_HERE" },
+    { "cap": 2048, "name": "WD Black 2TB (2230)", "link": "https://amazon.com/YOUR_LINK_HERE" }
+  ],
+  "2242": [
+    { "cap": 1024, "name": "KingSpec 1TB (2242)", "link": "https://amazon.com/YOUR_LINK_HERE" }
+  ],
+  "2280": [
+    { "cap": 1024, "name": "Samsung 990 Pro 1TB", "link": "https://amazon.com/YOUR_LINK_HERE" },
+    { "cap": 2048, "name": "Samsung 990 Pro 2TB", "link": "https://amazon.com/YOUR_LINK_HERE" },
+    { "cap": 4096, "name": "Crucial P3 4TB", "link": "https://amazon.com/YOUR_LINK_HERE" }
+  ]
+}
