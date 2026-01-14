@@ -143,16 +143,24 @@
     <h2 style="color: var(--primary); border-bottom: 1px solid var(--border); padding-bottom: 10px;">How to Choose the Right Storage</h2>
     
     <h3 style="color: var(--text);">Steam Deck: LCD vs. OLED</h3>
-    <p>The Steam Deck (both LCD and OLED models) supports <strong>UHS-I MicroSD cards</strong>. While you can use a faster UHS-II card, the Deck's slot is capped at UHS-I speeds (approx. 100MB/s), so you won't see a performance benefit. For internal upgrades, the Deck uses a unique <strong>M.2 2230 SSD</strong>, which is much smaller than standard PC drives.</p>
+    <p>The Steam Deck supports <strong>UHS-I MicroSD cards</strong>. While you can insert a faster UHS-II card, the Deck's slot is capped at UHS-I speeds (~100MB/s), so you won't see a performance benefit. For internal upgrades, the Steam Deck requires a specific <strong>M.2 2230 SSD</strong> . Do not buy a standard 2280 PC drive; it will not fit.</p>
 
-    <h3 style="color: var(--text);">Nintendo Switch 2 & Backwards Compatibility</h3>
-    <p>The Nintendo Switch 2 utilizes the new <strong>MicroSD Express</strong> standard. These cards can reach speeds up to 800MB/s, significantly reducing load times for next-gen games. However, standard UHS-I cards will still work for older, backwards-compatible titles.</p>
+    <h3 style="color: var(--warning);">⚠️ Nintendo Switch 2 Compatibility</h3>
+    <p>The Nintendo Switch 2 uses the <strong>MicroSD Express</strong> standard to handle next-gen textures and fast loading times . <strong>Standard UHS-I cards are NOT recommended.</strong> Even for backward-compatible Switch 1 games, the system architecture relies on the high-speed Express lanes. Using an older card may result in stuttering, crashes, or an inability to launch new titles.</p>
 
-    <h3 style="color: var(--text);">PC Handhelds (ROG Ally & Legion Go)</h3>
-    <p>Windows handhelds like the ROG Ally and Legion Go have different requirements. The ROG Ally supports <strong>UHS-II SD cards</strong> (300MB/s+), making them viable for playing AAA games directly from the card. The Legion Go is unique because it uses a <strong>2242-sized SSD</strong>, whereas most others use 2230 or 2280.</p>
-</div>
-<footer style="margin-top: 60px; text-align: center; color: #64748b; font-size: 0.8rem; padding-bottom: 20px;">
-   <div style="margin-top: 50px; text-align: center; border-top: 1px solid var(--border); padding-top: 40px;">
+    <h3 style="color: var(--text);">PC Handhelds (Legion, ROG, MSI)</h3>
+    <p>The market is split on storage standards. The <strong>ROG Ally</strong> and <strong>Legion Go</strong> support high-speed <strong>UHS-II SD cards</strong> (300MB/s+), which are great for running AAA games externally. However, internal SSD sizes vary wildly:
+    <ul>
+        <li><strong>Steam Deck / ROG Ally:</strong> Uses M.2 2230 (Small)</li>
+        <li><strong>Legion Go / Go S:</strong> Uses M.2 2242 (Medium)</li>
+        <li><strong>Legion 2 / Ally X:</strong> Uses M.2 2280 (Standard PC Size)</li>
+    </ul>
+    </p>
+
+    <h3 style="color: var(--text);">Retro Handhelds (AYN, Anbernic, Powkiddy)</h3>
+    <p>For devices like the <strong>AYN Odin 2</strong>, <strong>Retroid Pocket 4</strong>, or <strong>Anbernic RG35XX</strong>, speed matters less than capacity. These devices generally do not support UHS-II or Express speeds. A high-capacity, reliable UHS-I card (like a Samsung EVO or SanDisk Ultra) is the most cost-effective way to store thousands of ROMs.</p>
+
+    <div style="margin-top: 50px; text-align: center; border-top: 1px solid var(--border); padding-top: 40px;">
         <p style="margin-bottom: 20px; font-size: 0.9rem; color: #94a3b8;">
             I built this tool for free because I love handhelds. If it saved you some time (or money), you can save my progress below.
         </p>
@@ -178,10 +186,10 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 2H19C19.5523 2 20 2.44772 20 3V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V3C4 2.44772 4.44772 2 5 2ZM6 4V20H18V4H6ZM8 12H16V18H8V12ZM8 4H14V9H8V4Z"/>
             </svg>
-            
             SAVE DATA (DONATE)
         </a>
     </div>
+</div>
 </div>
     <p>Handheld Storage Master is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.</p>
     <p>&copy; 2026 Handheld Storage Master. Not affiliated with Valve, Nintendo, or ASUS.</p>
