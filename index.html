@@ -3,382 +3,306 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Handheld Storage Master 2.1</title>
+    <title>Handheld Storage Master 3.0</title>
     <style>
         :root {
-            --bg: #0f172a;
-            --surface: #1e293b;
-            --primary: #8b5cf6;
-            --accent: #06b6d4;
-            --text: #f8fafc;
-            --border: #334155;
-            --success: #10b981;
+            --bg: #0f172a; --surface: #1e293b; --primary: #8b5cf6;
+            --accent: #06b6d4; --text: #f8fafc; --border: #334155;
         }
-
         body {
             font-family: 'Inter', system-ui, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            margin: 0;
-            padding: 20px;
-            padding-bottom: 140px; /* Space for dock */
+            background-color: var(--bg); color: var(--text);
+            margin: 0; padding: 20px; padding-bottom: 180px;
         }
-
         .container { max-width: 800px; margin: 0 auto; }
-
         h1 {
-            text-align: center;
+            text-align: center; font-size: 2.2rem; margin-bottom: 10px;
             background: linear-gradient(to right, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
         .subtitle { text-align: center; color: #94a3b8; margin-bottom: 40px; }
 
-        /* Controls */
-        .control-group { margin-bottom: 30px; }
+        /* Inputs */
         label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--accent); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
-
-        select, input[type="text"] {
-            width: 100%;
-            padding: 15px;
-            background: var(--surface);
-            border: 2px solid var(--border);
-            color: white;
-            border-radius: 12px;
-            font-size: 1rem;
-            box-sizing: border-box;
+        select, input {
+            width: 100%; padding: 14px; background: var(--surface);
+            border: 2px solid var(--border); color: white; border-radius: 10px;
+            box-sizing: border-box; font-size: 1rem;
         }
         select:focus, input:focus { outline: none; border-color: var(--primary); }
 
-        /* Retro Section */
-        .retro-box {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        @media (max-width: 600px) { .retro-box { grid-template-columns: 1fr; } }
-        
-        .retro-item { display: flex; justify-content: space-between; align-items: center; }
-        .retro-item span { font-size: 0.95rem; }
-        .retro-input { 
-            width: 80px; padding: 8px; text-align: center; 
-            background: var(--bg); border: 1px solid var(--border); border-radius: 6px; color: white;
-        }
-
-        /* Search Bar */
-        .search-box { position: relative; margin-bottom: 20px; }
-        .search-box input { padding-left: 40px; }
-        .search-icon {
-            position: absolute; left: 15px; top: 50%; transform: translateY(-50%);
-            opacity: 0.5; width: 18px; height: 18px;
-        }
-
         /* Game Grid */
-        .game-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 12px;
-        }
+        .game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; margin-top: 15px; }
         .game-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 15px;
-            cursor: pointer;
-            transition: 0.2s;
-            position: relative;
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 8px; padding: 15px; cursor: pointer; transition: 0.2s;
         }
         .game-card:hover { transform: translateY(-2px); border-color: #64748b; }
         .game-card.selected {
-            background: rgba(139, 92, 246, 0.2);
-            border-color: var(--primary);
-            box-shadow: 0 0 15px rgba(139, 92, 246, 0.1);
+            background: rgba(139, 92, 246, 0.2); border-color: var(--primary);
         }
-        .game-title { font-weight: 600; font-size: 0.95rem; display: block; line-height: 1.3; }
-        .game-size { font-size: 0.8rem; color: #94a3b8; display: block; margin-top: 5px; }
+        .game-title { font-weight: 600; font-size: 0.9rem; display: block; }
+        .game-size { font-size: 0.8rem; color: #94a3b8; margin-top: 5px; display: block; }
 
-        /* Results Dock */
+        /* Retro Section */
+        .retro-box {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 12px; padding: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;
+        }
+        .retro-item { display: flex; justify-content: space-between; align-items: center; }
+        .retro-input { width: 70px; padding: 8px; text-align: center; background: var(--bg); }
+
+        /* Dock */
         .dock {
-            position: fixed;
-            bottom: 0; left: 0; right: 0;
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            border-top: 1px solid var(--border);
-            padding: 20px;
-            box-shadow: 0 -10px 40px rgba(0,0,0,0.5);
-            z-index: 100;
+            position: fixed; bottom: 0; left: 0; right: 0;
+            background: rgba(15, 23, 42, 0.98); border-top: 1px solid var(--border);
+            padding: 20px; box-shadow: 0 -10px 40px rgba(0,0,0,0.5); z-index: 100;
         }
-        .dock-inner {
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .total-section { flex: 1; }
+        .dock-inner { max-width: 800px; margin: 0 auto; display: flex; gap: 20px; align-items: center; }
+        .total-box { min-width: 120px; }
         .total-val { font-size: 2.2rem; font-weight: 800; line-height: 1; }
-        .rec-section { flex: 2; text-align: right; }
         
-        .buy-btn {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 12px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-left: 15px;
-            transition: 0.2s;
+        .rec-box { flex: 1; }
+        .rec-buttons { display: flex; gap: 10px; margin-top: 8px; }
+        .btn {
+            flex: 1; padding: 10px; border-radius: 6px; text-decoration: none;
+            text-align: center; font-weight: bold; font-size: 0.9rem;
+            display: flex; flex-direction: column; justify-content: center;
         }
-        .buy-btn:hover { background: #7c3aed; transform: scale(1.05); }
+        .btn small { font-weight: normal; font-size: 0.75rem; opacity: 0.9; }
+        .btn-sd { background: #fbbf24; color: #000; }
+        .btn-ssd { background: #ef4444; color: #fff; }
+        .btn:hover { filter: brightness(1.1); }
+        .hidden { display: none !important; }
 
-        .loader { text-align: center; padding: 20px; color: #94a3b8; }
+        @media (max-width: 600px) {
+            .retro-box { grid-template-columns: 1fr; }
+            .dock-inner { flex-direction: column; align-items: stretch; }
+            .total-box { text-align: center; margin-bottom: 10px; }
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
     <h1>Handheld Storage Master</h1>
-    <p class="subtitle">Optimize your library for Switch 2, Steam Deck & Retro Devices</p>
+    <p class="subtitle">Smart Calculator with SSD & SD Recommendations</p>
 
-    <div class="control-group">
+    <div style="margin-bottom: 30px;">
         <label>1. Select Device</label>
-        <select id="deviceSelect">
-            <optgroup label="Nintendo">
-                <option value="switch2">Nintendo Switch 2 (MicroSD Express)</option>
-                <option value="switch">Nintendo Switch / OLED / Lite</option>
-            </optgroup>
-            <optgroup label="Valve">
-                <option value="deck">Steam Deck (LCD/OLED)</option>
-            </optgroup>
-            <optgroup label="PC Handhelds">
-                <option value="rog">ROG Ally / Ally X</option>
-                <option value="legion">Legion Go</option>
-            </optgroup>
-            <optgroup label="Retro">
-                <option value="retro_low">Retro Handheld (Miyoo/Anbernic)</option>
-                <option value="retro_high">High-End Android (Odin 2/Retroid)</option>
-            </optgroup>
-        </select>
+        <select id="deviceSelect"><option>Loading devices...</option></select>
     </div>
 
-    <div class="control-group">
-        <label>2. Retro Collection (Estimated Count)</label>
+    <div style="margin-bottom: 30px;">
+        <label>2. Retro Collection (Qty)</label>
         <div class="retro-box">
-            <div class="retro-item">
-                <span>NES / SNES / GBA</span>
-                <input type="number" class="retro-input" data-size="0.01" placeholder="0" oninput="calculate()">
-            </div>
-            <div class="retro-item">
-                <span>N64 / DS / Dreamcast</span>
-                <input type="number" class="retro-input" data-size="0.2" placeholder="0" oninput="calculate()">
-            </div>
-            <div class="retro-item">
-                <span>PlayStation 1 (PSX)</span>
-                <input type="number" class="retro-input" data-size="0.6" placeholder="0" oninput="calculate()">
-            </div>
-            <div class="retro-item">
-                <span>PS2 / GameCube</span>
-                <input type="number" class="retro-input" data-size="3.0" placeholder="0" oninput="calculate()">
-            </div>
+            <div class="retro-item"><span>NES/SNES/GBA</span><input type="number" class="retro-input" data-size="0.01"></div>
+            <div class="retro-item"><span>N64/DS/Dreamcast</span><input type="number" class="retro-input" data-size="0.2"></div>
+            <div class="retro-item"><span>PS1/PSP</span><input type="number" class="retro-input" data-size="0.6"></div>
+            <div class="retro-item"><span>PS2/GameCube</span><input type="number" class="retro-input" data-size="3.0"></div>
         </div>
     </div>
 
-    <div class="control-group">
+    <div>
         <label>3. Add Modern Games</label>
-        <div class="search-box">
-            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input type="text" id="searchInput" placeholder="Search for games (e.g. Zelda, Call of Duty)...">
-        </div>
-        
-        <div id="loader" class="loader">Loading database...</div>
+        <input type="text" id="searchInput" placeholder="Search games...">
         <div class="game-grid" id="gameGrid"></div>
     </div>
 </div>
 
-<div class="dock">
+<div class="dock hidden" id="resultDock">
     <div class="dock-inner">
-        <div class="total-section">
-            <div style="font-size:0.8rem; color:#94a3b8; text-transform: uppercase;">Total Needed</div>
+        <div class="total-box">
+            <div style="font-size:0.8rem; color:#94a3b8; text-transform:uppercase;">Total Needed</div>
             <div class="total-val" id="totalDisplay">0 <span style="font-size:1rem; color:var(--primary)">GB</span></div>
         </div>
-        <div class="rec-section">
-            <div id="recText" style="font-size:0.9rem; margin-bottom:5px;">Select games to see recommendations</div>
-            <a href="#" id="buyBtn" class="buy-btn" style="display:none">View on Amazon</a>
+        <div class="rec-box">
+            <div id="recText" style="font-size:0.95rem; color:#e2e8f0;">Calculation...</div>
+            <div class="rec-buttons" id="recButtons"></div>
         </div>
     </div>
 </div>
 
 <script>
-    let gamesDB = [];
-    let selectedGames = new Set();
-    const grid = document.getElementById('gameGrid');
-    const searchInput = document.getElementById('searchInput');
-    const deviceSelect = document.getElementById('deviceSelect');
-    const retroInputs = document.querySelectorAll('.retro-input');
+    // GLOBAL STATE
+    let db = { games: [], devices: [], products: {} };
+    let state = { selectedGames: new Set(), device: null };
 
-    const deviceConfig = {
-        'switch2':   { key: 'switch2', label: 'Switch 2', protocol: 'Express' },
-        'switch':    { key: 'switch', label: 'Switch', protocol: 'UHS-I' },
-        'deck':      { key: 'pc', label: 'Steam Deck', protocol: 'UHS-I' },
-        'rog':       { key: 'pc', label: 'ROG Ally', protocol: 'UHS-II' },
-        'legion':    { key: 'pc', label: 'Legion Go', protocol: 'UHS-II' },
-        'retro_low': { key: 'switch', label: 'Retro', protocol: 'UHS-I' }, 
-        'retro_high':{ key: 'switch', label: 'Android', protocol: 'UHS-I' }
-    };
-
-    // 1. Fetch JSON
-    fetch('games.json')
-        .then(response => response.json())
-        .then(data => {
-            gamesDB = data;
-            document.getElementById('loader').style.display = 'none';
+    // INIT
+    async function init() {
+        try {
+            const [g, d, p] = await Promise.all([
+                fetch('games.json').then(r => r.json()),
+                fetch('devices.json').then(r => r.json()),
+                fetch('products.json').then(r => r.json())
+            ]);
+            db.games = g;
+            db.devices = d;
+            db.products = p;
+            
+            populateDeviceSelect();
             renderGames();
-        })
-        .catch(err => {
-            document.getElementById('loader').innerText = "Error loading database.";
-        });
+            
+            // Listeners
+            document.getElementById('deviceSelect').addEventListener('change', onDeviceChange);
+            document.getElementById('searchInput').addEventListener('input', renderGames);
+            document.querySelectorAll('.retro-input').forEach(el => el.addEventListener('input', calculate));
+            
+            // Set initial
+            state.device = db.devices[0];
+            calculate();
 
-    // 2. Render Grid
-    function renderGames() {
-        grid.innerHTML = '';
-        const currentDev = deviceConfig[deviceSelect.value];
-        const term = searchInput.value.toLowerCase();
-
-        const visibleGames = gamesDB.filter(game => {
-            const hasSize = game.sizes[currentDev.key] !== null;
-            const matchesSearch = game.title.toLowerCase().includes(term);
-            return hasSize && matchesSearch;
-        });
-
-        visibleGames.sort((a, b) => {
-            const aSel = selectedGames.has(a.id) ? 1 : 0;
-            const bSel = selectedGames.has(b.id) ? 1 : 0;
-            return bSel - aSel;
-        });
-
-        const toShow = term ? visibleGames : visibleGames.slice(0, 12);
-
-        toShow.forEach(game => {
-            const size = game.sizes[currentDev.key];
-            const el = document.createElement('div');
-            el.className = `game-card ${selectedGames.has(game.id) ? 'selected' : ''}`;
-            el.innerHTML = `
-                <span class="game-title">${game.title}</span>
-                <span class="game-size">${size} GB</span>
-            `;
-            el.onclick = () => toggleGame(game.id);
-            grid.appendChild(el);
-        });
-        
-        if(toShow.length === 0) {
-            grid.innerHTML = '<div style="grid-column:1/-1; text-align:center; color:#64748b;">No compatible games found for this device.</div>';
+        } catch (e) {
+            document.querySelector('h1').innerText = "Error Loading Data Files";
+            console.error(e);
         }
     }
 
-    // 3. Logic
-    function toggleGame(id) {
-        if(selectedGames.has(id)) {
-            selectedGames.delete(id);
-        } else {
-            selectedGames.add(id);
+    function populateDeviceSelect() {
+        const sel = document.getElementById('deviceSelect');
+        sel.innerHTML = '';
+        
+        // Group by category
+        const cats = {};
+        db.devices.forEach(d => {
+            if(!cats[d.category]) cats[d.category] = [];
+            cats[d.category].push(d);
+        });
+
+        for (const [cat, devs] of Object.entries(cats)) {
+            const group = document.createElement('optgroup');
+            group.label = cat;
+            devs.forEach(d => {
+                const opt = document.createElement('option');
+                opt.value = d.id;
+                opt.innerText = d.label;
+                group.appendChild(opt);
+            });
+            sel.appendChild(group);
         }
+        state.device = db.devices[0];
+    }
+
+    function onDeviceChange(e) {
+        state.device = db.devices.find(d => d.id === e.target.value);
+        state.selectedGames.clear(); // Clear games on switch to avoid confusion
+        document.querySelectorAll('.retro-input').forEach(i => i.value = '');
         renderGames();
         calculate();
+    }
+
+    function renderGames() {
+        const grid = document.getElementById('gameGrid');
+        grid.innerHTML = '';
+        const term = document.getElementById('searchInput').value.toLowerCase();
+        
+        // Determine platform key for sizes (e.g. "pc", "switch2", "switch")
+        // Mapping logic: if device ID contains 'switch2' -> switch2, 'switch' -> switch, else 'pc'
+        let sizeKey = 'pc';
+        if (state.device.id.includes('switch2')) sizeKey = 'switch2';
+        else if (state.device.id.includes('switch')) sizeKey = 'switch';
+
+        const filtered = db.games.filter(g => {
+            // Must have size for this platform
+            if (g.sizes[sizeKey] === null) return false;
+            return g.title.toLowerCase().includes(term);
+        });
+
+        // Sort selected first
+        filtered.sort((a,b) => (state.selectedGames.has(a.id) ? -1 : 1));
+
+        // Show max 12 if no search
+        const toShow = term ? filtered : filtered.slice(0, 12);
+
+        toShow.forEach(g => {
+            const size = g.sizes[sizeKey];
+            const el = document.createElement('div');
+            el.className = `game-card ${state.selectedGames.has(g.id) ? 'selected' : ''}`;
+            el.innerHTML = `<span class="game-title">${g.title}</span><span class="game-size">${size} GB</span>`;
+            el.onclick = () => {
+                if (state.selectedGames.has(g.id)) state.selectedGames.delete(g.id);
+                else state.selectedGames.add(g.id);
+                renderGames();
+                calculate();
+            };
+            grid.appendChild(el);
+        });
     }
 
     function calculate() {
-        const currentDev = deviceConfig[deviceSelect.value];
+        // 1. Calc Total
         let total = 0;
+        let sizeKey = 'pc';
+        if (state.device.id.includes('switch2')) sizeKey = 'switch2';
+        else if (state.device.id.includes('switch')) sizeKey = 'switch';
 
-        // Sum Modern Games
-        selectedGames.forEach(id => {
-            const game = gamesDB.find(g => g.id === id);
-            if(game && game.sizes[currentDev.key]) {
-                total += game.sizes[currentDev.key];
-            }
+        state.selectedGames.forEach(id => {
+            const g = db.games.find(x => x.id === id);
+            if(g) total += g.sizes[sizeKey];
         });
 
-        // Sum Retro Games
-        retroInputs.forEach(input => {
-            const qty = parseInt(input.value) || 0;
-            const size = parseFloat(input.dataset.size);
-            total += (qty * size);
+        document.querySelectorAll('.retro-input').forEach(i => {
+            total += (parseInt(i.value)||0) * parseFloat(i.dataset.size);
         });
 
-        // FIXED: Only add OS buffer if there is actual content
-        if (total > 0) {
-            total = Math.ceil(total + 15);
-        } else {
-            total = 0;
-        }
+        // Only add OS buffer if games selected
+        if(total > 0) total = Math.ceil(total + 20);
 
-        document.getElementById('totalDisplay').innerHTML = total + '<span style="font-size:1rem; color:var(--primary)">GB</span>';
-        updateRecommendation(total, currentDev);
-    }
+        // 2. Render Results
+        const dock = document.getElementById('resultDock');
+        const totalDisp = document.getElementById('totalDisplay');
+        const recText = document.getElementById('recText');
+        const btnBox = document.getElementById('recButtons');
 
-    // 4. Reset on Device Change
-    deviceSelect.addEventListener('change', () => {
-        selectedGames.clear(); 
-        searchInput.value = ''; 
-        // Also clear retro inputs
-        retroInputs.forEach(input => input.value = '');
-        renderGames();
-        calculate();
-    });
-
-    searchInput.addEventListener('input', renderGames);
-
-    // 5. Recommendation Engine
-    function updateRecommendation(total, devConfig) {
-        const btn = document.getElementById('buyBtn');
-        const text = document.getElementById('recText');
-
-        if(total <= 0) {
-            text.innerText = "Select games to see recommendations";
-            btn.style.display = "none";
+        if(total === 0) {
+            dock.classList.add('hidden');
             return;
         }
+        dock.classList.remove('hidden');
+        totalDisp.innerHTML = `${total} <span style="font-size:1rem;color:var(--primary)">GB</span>`;
 
-        btn.style.display = "inline-block";
-        let product = "";
-        let link = "";
+        // 3. Recommendation Logic (The Brains)
+        let html = '';
+        
+        // Find best SD card
+        const sdType = state.device.sd_type; 
+        const sdProducts = db.products[sdType] || [];
+        // Simple logic: find smallest card > total
+        let bestSD = sdProducts.find(p => p.cap >= total);
+        if (!bestSD && sdProducts.length > 0) bestSD = sdProducts[sdProducts.length-1]; // Max out
 
-        if (devConfig.protocol === 'Express') {
-            if(total < 240) {
-                product = "Samsung 256GB MicroSD Express";
-                link = "LINK_SW2_256";
-            } else if (total < 480) {
-                product = "SanDisk 512GB MicroSD Express";
-                link = "LINK_SW2_512";
-            } else {
-                product = "Lexar 1TB MicroSD Express";
-                link = "LINK_SW2_1TB";
-            }
-        } else {
-            if(total < 240) {
-                product = "Samsung EVO 256GB";
-                link = "LINK_STD_256";
-            } else if (total < 480) {
-                product = "Samsung EVO 512GB";
-                link = "LINK_STD_512";
-            } else {
-                product = "SanDisk Extreme 1TB";
-                link = "LINK_STD_1TB";
-            }
+        // Find best SSD (if supported)
+        let bestSSD = null;
+        if (state.device.ssd_type) {
+            const ssdList = db.products[state.device.ssd_type] || [];
+            bestSSD = ssdList.find(p => p.cap >= total);
+            if (!bestSSD && ssdList.length > 0) bestSSD = ssdList[ssdList.length-1];
         }
 
-        text.innerHTML = `Recommended for <strong>${devConfig.label}</strong>:`;
-        btn.innerHTML = `Get ${product} &rarr;`;
-        btn.href = link; 
-    }
-</script>
+        // SCENARIO 1: Device has SSD + SD (e.g. Steam Deck)
+        if (state.device.ssd_type) {
+            if (total > 800) {
+                // Large Library: Recommend SSD
+                recText.innerHTML = `🔥 <strong>Power User!</strong> For ${total}GB, you need an SSD upgrade.`;
+                if(bestSSD) html += `<a href="${bestSSD.link}" target="_blank" class="btn btn-ssd">${bestSSD.name}<small>Internal Upgrade</small></a>`;
+                html += `<a href="${bestSD.link}" target="_blank" class="btn btn-sd">${bestSD.name}<small>MicroSD Backup</small></a>`;
+            } else {
+                // Small Library: Recommend SD (Cheaper)
+                recText.innerHTML = `You can fit this on a MicroSD, but an SSD is faster.`;
+                html += `<a href="${bestSD.link}" target="_blank" class="btn btn-sd">${bestSD.name}<small>Best Value</small></a>`;
+                if(bestSSD) html += `<a href="${bestSSD.link}" target="_blank" class="btn btn-ssd" style="opacity:0.6">${bestSSD.name}<small>Faster Option</small></a>`;
+            }
+        } 
+        // SCENARIO 2: SD Only Device (Switch / Retro)
+        else {
+            recText.innerHTML = `Recommended Card for <strong>${state.device.label}</strong>:`;
+            if(bestSD) html += `<a href="${bestSD.link}" target="_blank" class="btn btn-sd">${bestSD.name}<small>View on Amazon</small></a>`;
+        }
 
+        btnBox.innerHTML = html;
+    }
+
+    init();
+</script>
 </body>
 </html>
