@@ -269,10 +269,11 @@
         grid.innerHTML = '';
         const term = document.getElementById('searchInput').value.toLowerCase();
         
-        // Determine platform key for sizes (e.g. "pc", "switch2", "switch")
-        let sizeKey = 'pc';
-        if (state.device.id.includes('switch2')) sizeKey = 'switch2';
-        else if (state.device.id.includes('switch')) sizeKey = 'switch';
+       // New Logic with Android support
+let sizeKey = 'pc';
+if (state.device.id.includes('switch2')) sizeKey = 'switch2';
+else if (state.device.id.includes('switch')) sizeKey = 'switch';
+else if (state.device.category.includes('Android') || state.device.id === 'retroid' || state.device.id === 'odin2') sizeKey = 'android';
 
         const filtered = db.games.filter(g => {
             if (g.sizes[sizeKey] === null) return false;
@@ -301,9 +302,11 @@
     function calculate() {
         // 1. Calc Total
         let total = 0;
-        let sizeKey = 'pc';
-        if (state.device.id.includes('switch2')) sizeKey = 'switch2';
-        else if (state.device.id.includes('switch')) sizeKey = 'switch';
+        // New Logic with Android support
+let sizeKey = 'pc';
+if (state.device.id.includes('switch2')) sizeKey = 'switch2';
+else if (state.device.id.includes('switch')) sizeKey = 'switch';
+else if (state.device.category.includes('Android') || state.device.id === 'retroid' || state.device.id === 'odin2') sizeKey = 'android';
 
         state.selectedGames.forEach(id => {
             const g = db.games.find(x => x.id === id);
