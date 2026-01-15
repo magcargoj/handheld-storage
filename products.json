@@ -8,29 +8,29 @@
     { "cap": 1536, "name": "SanDisk Ultra 1.5TB", "link": "https://amzn.to/3LeSulK" }
   ],
   "uhs2": [
-    { "cap": 128, "name": "Lexar Gold 128GB (UHS-II)", "link": "https://amazon.com/YOUR_LINK_HERE" },
-    { "cap": 256, "name": "Lexar Gold 256GB (UHS-II)", "link": "https://amazon.com/YOUR_LINK_HERE" },
-    { "cap": 512, "name": "Lexar Gold 512GB (UHS-II)", "link": "https://amazon.com/YOUR_LINK_HERE" }
+    { "cap": 128, "name": "Lexar Gold 128GB (UHS-II)", "link": "https://amzn.to/3LELfn3" },
+    { "cap": 256, "name": "Lexar Gold 256GB (UHS-II)", "link": "https://amzn.to/3ZcPR70" },
+    { "cap": 512, "name": "Nextorage 512GB (UHS-II)", "link": "https://amzn.to/3LBNgk3" }
   ],
   "express": [
     { "cap": 256, "name": "Samsung Express 256GB", "link": "https://amzn.to/4bzy7dv" },
     { "cap": 512, "name": "Samsung Express 512GB", "link": "https://amazon.com/YOUR_LINK_HERE" },
-    { "cap": 1024, "name": "Lexar Express 1TB", "link": "https://amazon.com/YOUR_LINK_HERE" }
+    { "cap": 1024, "name": "Lexar Express 1TB", "link": "https://amzn.to/3YGRv0K" }
   ],
   "2230": [
-    { "cap": 256, "name": "Sabrent Rocket 256GB (2230)", "link": "https://amazon.com/YOUR_LINK_HERE" },
-    { "cap": 512, "name": "Sabrent Rocket 512GB (2230)", "link": "https://amazon.com/YOUR_LINK_HERE" },
-    { "cap": 1024, "name": "Corsair MP600 1TB (2230)", "link": "https://amazon.com/YOUR_LINK_HERE" },
-    { "cap": 2048, "name": "WD Black SN770 2TB (2230)", "link": "https://amazon.com/YOUR_LINK_HERE" }
+    { "cap": 256, "name": "OEM Samsun 256GB (2230)", "link": "https://amzn.to/49BRDU7" },
+    { "cap": 512, "name": "KingSpec 512GB (2230)", "link": "https://amzn.to/3NeZOhQ" },
+    { "cap": 1024, "name": "Kingston 1TB (2230)", "link": "https://amzn.to/4qV0TJV" },
+    { "cap": 2048, "name": "Crucial 2TB (2230)", "link": "https://amzn.to/4jFc1Z3" }
   ],
   "2242": [
-    { "cap": 512, "name": "KingSpec 512GB (2242)", "link": "https://amazon.com/YOUR_LINK_HERE" },
-    { "cap": 1024, "name": "KingSpec 1TB (2242)", "link": "https://amazon.com/YOUR_LINK_HERE" },
-    { "cap": 2048, "name": "Sabrent Rocket 2TB (2242)", "link": "https://amazon.com/YOUR_LINK_HERE" }
+    { "cap": 512, "name": "KingSpec 512GB (2242)", "link": "https://amzn.to/4jLAdZZ" },
+    { "cap": 1024, "name": "KingSpec 1TB (2242)", "link": "https://amzn.to/4jEqQv0" },
+    { "cap": 2048, "name": "KingSpec 2TB(2242)", "link": "https://amzn.to/3YKE5Rg" }
   ],
   "2280": [
-    { "cap": 1024, "name": "Samsung 990 Pro 1TB", "link": "https://amazon.com/YOUR_LINK_HERE" },
-    { "cap": 2048, "name": "Samsung 990 Pro 2TB", "link": "https://amazon.com/YOUR_LINK_HERE" },
-    { "cap": 4096, "name": "Crucial P3 Plus 4TB", "link": "https://amazon.com/YOUR_LINK_HERE" }
+    { "cap": 1024, "name": "Samsung 990 Pro 1TB", "link": "https://amzn.to/4qmoUK2" },
+    { "cap": 2048, "name": "Samsung 990 Pro 2TB", "link": "https://amzn.to/4580RpW" },
+    { "cap": 4096, "name": "Samsung 990 PRO Heatsink SSD 4TB", "link": "https://amzn.to/4qGPXjL" }
   ]
 }
