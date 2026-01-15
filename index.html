@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Handheld Storage Calculator | Steam Deck, Switch 2 & ROG Ally</title>
-    <meta name="description" content="Calculate exactly which SD card or SSD you need for your Steam Deck, Nintendo Switch 2, or Retro Handheld. Build your game library and save money.">
-    <meta name="keywords" content="Steam Deck Storage Calculator, Switch 2 SD Card Size, Steam Deck SSD Calculator, ROG Ally Storage Planner, Retro Handheld SD Card Guide">
-    <meta name="author" content="HandheldMaster">
+    <title>Handheld Storage Calculator | SD Card & SSD Guide for Switch 2, Steam Deck, ROG Ally</title>
+    <meta name="description" content="Stop guessing. Calculate exactly which MicroSD card or SSD you need for your Nintendo Switch 2, Steam Deck, or ROG Ally. Compare sizes, check compatibility, and save money.">
+    <meta name="keywords" content="Nintendo Switch 2 SD Card size, Steam Deck SSD upgrade guide, ROG Ally storage expansion, Handheld storage calculator, 2230 vs 2280 SSD">
+    <meta name="author" content="Handheld Storage Master">
+    <link rel="canonical" href="https://magcargoj.github.io/Storage-Calculator/">
 
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -16,9 +17,47 @@
     <link rel="shortcut icon" href="favicon.ico">
 
     <meta property="og:title" content="Handheld Storage Calculator 💾">
-    <meta property="og:description" content="Calculate exactly how many games fit on your Steam Deck or Switch.">
+    <meta property="og:description" content="Find the perfect SD card or SSD for your handheld. Don't overspend on storage you don't need.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://magcargoj.github.io/Storage-Calculator/"> 
+    <meta property="og:image" content="https://magcargoj.github.io/Storage-Calculator/preview.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Handheld Storage Master",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "A calculator tool to determine storage requirements for handheld gaming consoles."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Which MicroSD card should I use for Nintendo Switch 2?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Nintendo Switch 2 supports the MicroSD Express standard. For best performance with next-gen games, use a MicroSD Express card. Standard UHS-I cards may cause slow loading times."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How can I expand ROG Ally storage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can expand ROG Ally storage using the UHS-II MicroSD slot for removable storage, or upgrade the internal M.2 2230 SSD. The newer ROG Ally X supports standard M.2 2280 SSDs."
+        }
+      }]
+    }
+    </script>
 
     <style>
         :root {
@@ -92,6 +131,19 @@
         .btn:hover { filter: brightness(1.1); }
         .hidden { display: none !important; }
 
+        /* Article & FAQ Styles */
+        .content-section { margin-top: 60px; max-width: 800px; margin-left: auto; margin-right: auto; color: #cbd5e1; line-height: 1.8; }
+        .content-section h2 { color: var(--primary); border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-top: 40px;}
+        .content-section h3 { color: var(--text); margin-top: 30px; }
+        .content-section img { max-width: 100%; border-radius: 8px; margin: 15px 0; border: 1px solid var(--border); }
+        
+        details { background: var(--surface); margin-bottom: 10px; border-radius: 8px; overflow: hidden; }
+        summary { padding: 15px; font-weight: 600; cursor: pointer; list-style: none; position: relative; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '+'; position: absolute; right: 20px; font-weight: bold; color: var(--accent); }
+        details[open] summary::after { content: '-'; }
+        .faq-answer { padding: 0 15px 15px 15px; color: #94a3b8; font-size: 0.95rem; }
+
         @media (max-width: 600px) {
             .retro-box { grid-template-columns: 1fr; }
             .dock-inner { flex-direction: column; align-items: stretch; }
@@ -139,62 +191,66 @@
         </div>
     </div>
 </div>
-<div style="margin-top: 60px; max-width: 800px; margin-left: auto; margin-right: auto; color: #cbd5e1; line-height: 1.8;">
-    <h2 style="color: var(--primary); border-bottom: 1px solid var(--border); padding-bottom: 10px;">How to Choose the Right Storage</h2>
+
+<div class="content-section">
+    <h2>How to Choose the Right Storage</h2>
     
     <h3 style="color: var(--text);">Steam Deck: LCD vs. OLED</h3>
-    <p>The Steam Deck supports <strong>UHS-I MicroSD cards</strong>. While you can insert a faster UHS-II card, the Deck's slot is capped at UHS-I speeds (~100MB/s), so you won't see a performance benefit. For internal upgrades, the Steam Deck requires a specific <strong>M.2 2230 SSD</strong> . Do not buy a standard 2280 PC drive; it will not fit.</p>
+    <p>The Steam Deck supports <strong>UHS-I MicroSD cards</strong>. While you can insert a faster UHS-II card, the Deck's slot is capped at UHS-I speeds (~100MB/s). For internal upgrades, the Steam Deck requires a specific <strong>M.2 2230 SSD</strong>.</p>
+    <img src="ssd-comparison.jpg" alt="Comparison of M.2 2230 vs 2280 SSD sizes" onerror="this.style.display='none'">
+    <p>Do not buy a standard 2280 PC drive for the LCD or OLED Deck; it will not fit.</p>
 
     <h3 style="color: var(--warning);">⚠️ Nintendo Switch 2 Compatibility</h3>
-    <p>The Nintendo Switch 2 uses the <strong>MicroSD Express</strong> standard to handle next-gen textures and fast loading times . <strong>Standard UHS-I cards are NOT recommended.</strong> Even for backward-compatible Switch 1 games, the system architecture relies on the high-speed Express lanes.</p>
+    <p>The Nintendo Switch 2 uses the <strong>MicroSD Express</strong> standard. These cards can reach speeds up to 800MB/s.</p> 
+    <img src="sd-express.jpg" alt="MicroSD Express Pin Layout vs Standard MicroSD" onerror="this.style.display='none'">
+    <p><strong>Standard UHS-I cards are NOT recommended.</strong> Using an older card may result in stuttering on next-gen games.</p>
 
-    <h3 style="color: var(--text);">PC Handhelds (Legion, ROG, MSI)</h3>
-    <p>The market is split on storage standards. The <strong>ROG Ally</strong> and <strong>Legion Go</strong> support high-speed <strong>UHS-II SD cards</strong> (300MB/s+), which are great for running AAA games externally. However, internal SSD sizes vary wildly:
+    <h3>PC Handhelds (Legion, ROG, MSI)</h3>
+    <p>Internal SSD sizes vary by device:</p>
     <ul>
         <li><strong>Steam Deck / ROG Ally:</strong> Uses M.2 2230 (Small)</li>
         <li><strong>Legion Go / Go S:</strong> Uses M.2 2242 (Medium)</li>
         <li><strong>Legion 2 / Ally X:</strong> Uses M.2 2280 (Standard PC Size)</li>
     </ul>
-    </p>
 
-    <h3 style="color: var(--text);">Retro Handhelds (AYN, Anbernic, Powkiddy)</h3>
-    <p>For devices like the <strong>AYN Odin 2</strong>, <strong>Retroid Pocket 4</strong>, or <strong>Anbernic RG35XX</strong>, speed matters less than capacity. These devices generally do not support UHS-II or Express speeds. A high-capacity, reliable UHS-I card (like a Samsung EVO or SanDisk Ultra) is the most cost-effective way to store thousands of ROMs.</p>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+        <summary>Which MicroSD card should I use for Nintendo Switch 2?</summary>
+        <div class="faq-answer">
+            The Nintendo Switch 2 is optimized for <strong>MicroSD Express</strong> cards. While older UHS-I cards might fit, they are too slow for next-gen textures. We recommend the Samsung or SanDisk Express line for the best experience.
+        </div>
+    </details>
+    <details>
+        <summary>How can I expand ROG Ally storage?</summary>
+        <div class="faq-answer">
+            You have two options: 1. Use the UHS-II MicroSD slot (easiest, but check for heat issues on original Ally units). 2. Upgrade the internal SSD. The original Ally uses a 2230 SSD, while the Ally X uses a standard 2280 SSD.
+        </div>
+    </details>
+    <details>
+        <summary>Does the Steam Deck support UHS-II SD cards?</summary>
+        <div class="faq-answer">
+            The Steam Deck slot is physically compatible with UHS-II cards, but it will only run them at UHS-I speeds (approx 100MB/s). Save your money and buy a high-quality A2 UHS-I card instead.
+        </div>
+    </details>
 
     <div style="margin-top: 50px; text-align: center; border-top: 1px solid var(--border); padding-top: 40px;">
         <p style="margin-bottom: 20px; font-size: 0.9rem; color: #94a3b8;">
             I built this tool for free because I love handhelds. If it saved you some time (or money), you can save my progress below.
         </p>
-        
-        <a href="https://ko-fi.com/YOUR_USERNAME" target="_blank" style="
-            display: inline-flex; 
-            align-items: center; 
-            gap: 12px;
-            background: var(--surface); 
-            border: 2px solid var(--primary); 
-            color: var(--primary); 
-            padding: 12px 25px; 
-            border-radius: 8px; 
-            text-decoration: none; 
-            font-weight: 700; 
-            font-family: 'Courier New', monospace; 
-            letter-spacing: -0.5px;
-            transition: all 0.2s;
-            box-shadow: 0 4px 0 rgba(139, 92, 246, 0.4);
-        " onmouseover="this.style.transform='translateY(2px)'; this.style.boxShadow='0 2px 0 rgba(139, 92, 246, 0.4)'" 
+        <a href="https://ko-fi.com/YOUR_USERNAME" target="_blank" style="display: inline-flex; align-items: center; gap: 12px; background: var(--surface); border: 2px solid var(--primary); color: var(--primary); padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: 700; font-family: 'Courier New', monospace; letter-spacing: -0.5px; transition: all 0.2s; box-shadow: 0 4px 0 rgba(139, 92, 246, 0.4);" 
+           onmouseover="this.style.transform='translateY(2px)'; this.style.boxShadow='0 2px 0 rgba(139, 92, 246, 0.4)'" 
            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 0 rgba(139, 92, 246, 0.4)'">
-            
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 2H19C19.5523 2 20 2.44772 20 3V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V3C4 2.44772 4.44772 2 5 2ZM6 4V20H18V4H6ZM8 12H16V18H8V12ZM8 4H14V9H8V4Z"/>
             </svg>
             SAVE DATA (DONATE)
         </a>
     </div>
-      <p>Handheld Storage Master is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.</p>
+</div>
+
+<footer style="margin-top: 60px; text-align: center; color: #64748b; font-size: 0.8rem; padding-bottom: 20px;">
+    <p>Handheld Storage Master is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.</p>
     <p>&copy; 2026 Handheld Storage Master. Not affiliated with Valve, Nintendo, or ASUS.</p>
-</div>
-    
-</div>
-  
 </footer>
 
 <script>
@@ -259,7 +315,7 @@
 
     function onDeviceChange(e) {
         state.device = db.devices.find(d => d.id === e.target.value);
-        state.selectedGames.clear(); // Clear games on switch to avoid confusion
+        state.selectedGames.clear(); 
         document.querySelectorAll('.retro-input').forEach(i => i.value = '');
         renderGames();
         calculate();
@@ -270,11 +326,10 @@
         grid.innerHTML = '';
         const term = document.getElementById('searchInput').value.toLowerCase();
         
-       // New Logic with Android support
-let sizeKey = 'pc';
-if (state.device.id.includes('switch2')) sizeKey = 'switch2';
-else if (state.device.id.includes('switch')) sizeKey = 'switch';
-else if (state.device.category.includes('Android') || state.device.id === 'retroid' || state.device.id === 'odin2') sizeKey = 'android';
+        let sizeKey = 'pc';
+        if (state.device.id.includes('switch2')) sizeKey = 'switch2';
+        else if (state.device.id.includes('switch')) sizeKey = 'switch';
+        else if (state.device.category.includes('Android') || state.device.id === 'retroid' || state.device.id === 'odin2') sizeKey = 'android';
 
         const filtered = db.games.filter(g => {
             if (g.sizes[sizeKey] === null) return false;
@@ -282,7 +337,6 @@ else if (state.device.category.includes('Android') || state.device.id === 'retro
         });
 
         filtered.sort((a,b) => (state.selectedGames.has(a.id) ? -1 : 1));
-
         const toShow = term ? filtered : filtered.slice(0, 12);
 
         toShow.forEach(g => {
@@ -301,13 +355,11 @@ else if (state.device.category.includes('Android') || state.device.id === 'retro
     }
 
     function calculate() {
-        // 1. Calc Total
         let total = 0;
-        // New Logic with Android support
-let sizeKey = 'pc';
-if (state.device.id.includes('switch2')) sizeKey = 'switch2';
-else if (state.device.id.includes('switch')) sizeKey = 'switch';
-else if (state.device.category.includes('Android') || state.device.id === 'retroid' || state.device.id === 'odin2') sizeKey = 'android';
+        let sizeKey = 'pc';
+        if (state.device.id.includes('switch2')) sizeKey = 'switch2';
+        else if (state.device.id.includes('switch')) sizeKey = 'switch';
+        else if (state.device.category.includes('Android') || state.device.id === 'retroid' || state.device.id === 'odin2') sizeKey = 'android';
 
         state.selectedGames.forEach(id => {
             const g = db.games.find(x => x.id === id);
@@ -320,7 +372,6 @@ else if (state.device.category.includes('Android') || state.device.id === 'retro
 
         if(total > 0) total = Math.ceil(total + 20);
 
-        // 2. Render Results
         const dock = document.getElementById('resultDock');
         const totalDisp = document.getElementById('totalDisplay');
         const recText = document.getElementById('recText');
@@ -333,18 +384,14 @@ else if (state.device.category.includes('Android') || state.device.id === 'retro
         dock.classList.remove('hidden');
         totalDisp.innerHTML = `${total} <span style="font-size:1rem;color:var(--primary)">GB</span>`;
 
-        // 3. Recommendation Logic (IMPROVED)
         let html = '';
-        const MAX_SD_SIZE = 1536; // 1.5TB
+        const MAX_SD_SIZE = 1536; 
         
-        // Find best SD card
         const sdType = state.device.sd_type; 
         const sdProducts = db.products[sdType] || [];
         let bestSD = sdProducts.find(p => p.cap >= total);
-        // If nothing fits, grab the largest possible one
         if (!bestSD && sdProducts.length > 0) bestSD = sdProducts[sdProducts.length-1];
 
-        // Find best SSD (if supported)
         let bestSSD = null;
         if (state.device.ssd_type) {
             const ssdList = db.products[state.device.ssd_type] || [];
@@ -352,27 +399,22 @@ else if (state.device.category.includes('Android') || state.device.id === 'retro
             if (!bestSSD && ssdList.length > 0) bestSSD = ssdList[ssdList.length-1];
         }
 
-        // SCENARIO 1: Device supports SSD
         if (state.device.ssd_type) {
             if (total > MAX_SD_SIZE) {
-                // OVERFLOW: Too big for any MicroSD
                 recText.innerHTML = `⚠️ <strong>Limit Reached!</strong> You cannot fit this on a MicroSD card. You MUST upgrade your SSD.`;
                 if(bestSSD) html += `<a href="${bestSSD.link}" target="_blank" class="btn btn-ssd">${bestSSD.name}<small>Internal Upgrade</small></a>`;
                 else html += `<div class="btn btn-ssd" style="opacity:0.6; cursor:default;">No SSD Large Enough</div>`;
             } 
             else if (total > 800) {
-                // Large Library: Recommend SSD
                 recText.innerHTML = `🔥 <strong>Power User!</strong> For ${total}GB, we highly recommend an SSD upgrade.`;
                 if(bestSSD) html += `<a href="${bestSSD.link}" target="_blank" class="btn btn-ssd">${bestSSD.name}<small>Internal Upgrade</small></a>`;
                 html += `<a href="${bestSD.link}" target="_blank" class="btn btn-sd">${bestSD.name}<small>MicroSD Backup</small></a>`;
             } else {
-                // Small Library: Recommend SD (Cheaper)
                 recText.innerHTML = `You can fit this on a MicroSD, but an SSD is faster.`;
                 html += `<a href="${bestSD.link}" target="_blank" class="btn btn-sd">${bestSD.name}<small>Best Value</small></a>`;
                 if(bestSSD) html += `<a href="${bestSSD.link}" target="_blank" class="btn btn-ssd" style="opacity:0.6">${bestSSD.name}<small>Faster Option</small></a>`;
             }
         } 
-        // SCENARIO 2: SD Only Device (Switch / Retro)
         else {
             if (total > MAX_SD_SIZE) {
                 recText.innerHTML = `⚠️ <strong>Too Big!</strong> You will need multiple MicroSD cards.`;
