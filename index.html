@@ -8,7 +8,8 @@
     <meta name="description" content="Stop guessing. Calculate exactly which MicroSD card or SSD you need for your Nintendo Switch 2, Steam Deck, or ROG Ally. Compare sizes, check compatibility, and save money.">
     <meta name="keywords" content="Nintendo Switch 2 SD Card size, Steam Deck SSD upgrade guide, ROG Ally storage expansion, Handheld storage calculator, 2230 vs 2280 SSD">
     <meta name="author" content="Handheld Storage Master">
-    <link rel="canonical" href="https://magcargoj.github.io/Storage-Calculator/">
+    
+    <link rel="canonical" href="https://handheldstorage.wiki/">
 
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -19,8 +20,8 @@
     <meta property="og:title" content="Handheld Storage Calculator 💾">
     <meta property="og:description" content="Find the perfect SD card or SSD for your handheld. Don't overspend on storage you don't need.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://magcargoj.github.io/Storage-Calculator/"> 
-    <meta property="og:image" content="https://magcargoj.github.io/Storage-Calculator/preview.jpg">
+    <meta property="og:url" content="https://handheldstorage.wiki/"> 
+    <meta property="og:image" content="https://handheldstorage.wiki/preview.jpg">
 
     <script type="application/ld+json">
     {
@@ -197,13 +198,17 @@
     
     <h3 style="color: var(--text);">Steam Deck: LCD vs. OLED</h3>
     <p>The Steam Deck supports <strong>UHS-I MicroSD cards</strong>. While you can insert a faster UHS-II card, the Deck's slot is capped at UHS-I speeds (~100MB/s). For internal upgrades, the Steam Deck requires a specific <strong>M.2 2230 SSD</strong>.</p>
+    
     <img src="ssd-comparison.jpg" alt="Comparison of M.2 2230 vs 2280 SSD sizes" onerror="this.style.display='none'">
+    
     <p>Do not buy a standard 2280 PC drive for the LCD or OLED Deck; it will not fit.</p>
 
     <h3 style="color: var(--warning);">⚠️ Nintendo Switch 2 Compatibility</h3>
     <p>The Nintendo Switch 2 uses the <strong>MicroSD Express</strong> standard. These cards can reach speeds up to 800MB/s.</p> 
+    
     <img src="sd-express.jpg" alt="MicroSD Express Pin Layout vs Standard MicroSD" onerror="this.style.display='none'">
-    <p><strong>Standard UHS-I cards are NOT compatible.</strong></p>
+    
+    <p><strong>Standard UHS-I cards are NOT recommended.</strong> Even for backward-compatible Switch 1 games, the system architecture relies on the high-speed Express lanes.</p>
 
     <h3>PC Handhelds (Legion, ROG, MSI)</h3>
     <p>Internal SSD sizes vary by device:</p>
@@ -326,6 +331,7 @@
         grid.innerHTML = '';
         const term = document.getElementById('searchInput').value.toLowerCase();
         
+        // New Logic with Android support
         let sizeKey = 'pc';
         if (state.device.id.includes('switch2')) sizeKey = 'switch2';
         else if (state.device.id.includes('switch')) sizeKey = 'switch';
