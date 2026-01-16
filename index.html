@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-53B96527');</script>
-<!-- End Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-53B96527');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -29,7 +27,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://handheldstorage.wiki/"> 
     <meta property="og:image" content="https://handheldstorage.wiki/preview.jpg">
-<meta name="google-site-verification" content="mZ5-XPBW3CPVGZZwCnfLT2ZsbfDjZdfUoLY4In1MjS4" />
+    <meta name="google-site-verification" content="mZ5-XPBW3CPVGZZwCnfLT2ZsbfDjZdfUoLY4In1MjS4" />
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -160,12 +159,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53B96527"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<div class="container">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53B96527"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <div class="container">
     <h1>Handheld Storage Wiki</h1>
     <p class="subtitle">Smart Calculator with SSD & SD Recommendations</p>
 
@@ -273,6 +269,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     // GLOBAL STATE
     let db = { games: [], devices: [], products: {} };
     let state = { selectedGames: new Set(), device: null };
+    let searchTimeout; // NEW: Timer for search tracking
 
     // INIT
     async function init() {
@@ -291,7 +288,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             
             // Listeners
             document.getElementById('deviceSelect').addEventListener('change', onDeviceChange);
-            document.getElementById('searchInput').addEventListener('input', renderGames);
+            
+            // NEW SEARCH LISTENER (Tracks "Search Hits" for Analytics)
+            document.getElementById('searchInput').addEventListener('input', (e) => {
+                renderGames();
+                
+                // Clear the timer if they are still typing
+                clearTimeout(searchTimeout);
+                
+                // Wait 1 second after they stop typing to trigger the event
+                searchTimeout = setTimeout(() => {
+                    const term = e.target.value;
+                    if(term.length > 2) {
+                        // Push to DataLayer (GTM picks this up)
+                        window.dataLayer = window.dataLayer || [];
+                        window.dataLayer.push({
+                            'event': 'internal_search',
+                            'search_term': term
+                        });
+                        console.log("Tracked Search:", term);
+                    }
+                }, 1000);
+            });
+
             document.querySelectorAll('.retro-input').forEach(el => el.addEventListener('input', calculate));
             
             // Set initial
@@ -342,7 +361,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         grid.innerHTML = '';
         const term = document.getElementById('searchInput').value.toLowerCase();
         
-        // New Logic with Android support
         let sizeKey = 'pc';
         if (state.device.id.includes('switch2')) sizeKey = 'switch2';
         else if (state.device.id.includes('switch')) sizeKey = 'switch';
