@@ -420,6 +420,19 @@
     ]
   },
   {
+    "id": "hogwarts",
+    "title": "Hogwarts Legacy",
+    "sizes": {
+      "pc": 68.97,
+      "switch2": 23.1,
+      "switch": 17.1,
+      "android": null
+    },
+    "tags": [
+      "adventure"
+    ]
+  },
+  {
     "id": "hollow_knight",
     "title": "Hollow Knight",
     "sizes": {
