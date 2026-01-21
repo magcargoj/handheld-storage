@@ -690,7 +690,7 @@
     "title": "Factorio",
     "sizes": {
       "pc": 16.0,
-      "switch2": 0.0,
+      "switch2": null,
       "switch": 2.574,
       "android": null
     },
@@ -1231,7 +1231,7 @@
     "title": "Minecraft",
     "sizes": {
       "pc": 8.0,
-      "switch2": 0.0,
+      "switch2": null,
       "switch": 1.572,
       "android": null
     },
@@ -1952,7 +1952,7 @@
     "title": "Stardew Valley",
     "sizes": {
       "pc": 2.0,
-      "switch2": 0.0,
+      "switch2": null,
       "switch": 1.62,
       "android": null
     },
@@ -2450,4 +2450,5 @@
     "tags": [],
     "last_updated": "2026-01-21"
   }
+
 ]
