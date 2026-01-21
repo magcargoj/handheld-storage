@@ -8,92 +8,295 @@
   },
   {
     "id": "switch",
-    "label": "Nintendo Switch (OLED/Lite)",
+    "label": "Nintendo Switch (OLED / LCD / Lite)",
     "category": "Nintendo",
     "sd_type": "uhs1",
     "ssd_type": null
   },
+  
   {
-    "id": "deck",
-    "label": "Steam Deck (LCD/OLED)",
+    "id": "deck_oled",
+    "label": "Valve Steam Deck (OLED)",
     "category": "Valve",
     "sd_type": "uhs1",
     "ssd_type": "2230"
   },
   {
-    "id": "ally",
-    "label": "ROG Ally (Original/Z1E)",
-    "category": "PC Handhelds",
+    "id": "deck_lcd",
+    "label": "Valve Steam Deck (LCD)",
+    "category": "Valve",
+    "sd_type": "uhs1",
+    "ssd_type": "2230"
+  },
+
+  {
+    "id": "legion_go_2",
+    "label": "Lenovo Legion Go Gen 2",
+    "category": "PC Handhelds (Windows)",
+    "sd_type": "uhs2",
+    "ssd_type": "2280"
+  },
+  {
+    "id": "legion_go_s",
+    "label": "Lenovo Legion Go S",
+    "category": "PC Handhelds (Windows)",
+    "sd_type": "uhs2",
+    "ssd_type": "2242"
+  },
+  {
+    "id": "legion_go",
+    "label": "Lenovo Legion Go (Gen 1)",
+    "category": "PC Handhelds (Windows)",
+    "sd_type": "uhs2",
+    "ssd_type": "2242"
+  },
+
+  {
+    "id": "msi_claw_8",
+    "label": "MSI Claw 8 AI+",
+    "category": "PC Handhelds (Windows)",
+    "sd_type": "uhs2",
+    "ssd_type": "2280"
+  },
+  {
+    "id": "msi_claw_7",
+    "label": "MSI Claw 7 AI+",
+    "category": "PC Handhelds (Windows)",
     "sd_type": "uhs2",
     "ssd_type": "2230"
   },
   {
-    "id": "ally_x",
-    "label": "ROG Ally X",
-    "category": "PC Handhelds",
+    "id": "msi_claw",
+    "label": "MSI Claw (Core Ultra)",
+    "category": "PC Handhelds (Windows)",
+    "sd_type": "uhs2",
+    "ssd_type": "2230"
+  },
+  {
+    "id": "rog_ally_x",
+    "label": "ASUS ROG Ally X",
+    "category": "PC Handhelds (Windows)",
     "sd_type": "uhs2",
     "ssd_type": "2280"
   },
   {
-    "id": "legion",
-    "label": "Lenovo Legion Go (Gen 1)",
-    "category": "PC Handhelds",
+    "id": "rog_ally",
+    "label": "ASUS ROG Ally (Z1 / Z1E)",
+    "category": "PC Handhelds (Windows)",
     "sd_type": "uhs2",
-    "ssd_type": "2242"
+    "ssd_type": "2230"
   },
+
   {
-    "id": "legion2",
-    "label": "Lenovo Legion Go 2",
-    "category": "PC Handhelds",
+    "id": "ayaneo_3",
+    "label": "AYANEO 3",
+    "category": "AYANEO (Windows)",
     "sd_type": "uhs2",
     "ssd_type": "2280"
   },
   {
-    "id": "legion_s",
-    "label": "Lenovo Legion Go S (Lite)",
-    "category": "PC Handhelds",
+    "id": "ayaneo_kun",
+    "label": "AYANEO Kun",
+    "category": "AYANEO (Windows)",
     "sd_type": "uhs2",
+    "ssd_type": "2280"
+  },
+  {
+    "id": "ayaneo_slide",
+    "label": "AYANEO Slide",
+    "category": "AYANEO (Windows)",
+    "sd_type": "uhs2",
+    "ssd_type": "2280"
+  },
+  {
+    "id": "ayaneo_flip_ds",
+    "label": "AYANEO Flip DS / 1S",
+    "category": "AYANEO (Windows)",
+    "sd_type": "uhs2",
+    "ssd_type": "2230"
+  },
+  {
+    "id": "ayaneo_flip_kb",
+    "label": "AYANEO Flip KB",
+    "category": "AYANEO (Windows)",
+    "sd_type": "uhs2",
+    "ssd_type": "2230"
+  },
+  {
+    "id": "ayaneo_2s",
+    "label": "AYANEO 2 / 2S",
+    "category": "AYANEO (Windows)",
+    "sd_type": "uhs2",
+    "ssd_type": "2280"
+  },
+  {
+    "id": "ayaneo_geek",
+    "label": "AYANEO Geek / 1S",
+    "category": "AYANEO (Windows)",
+    "sd_type": "uhs2",
+    "ssd_type": "2280"
+  },
+  {
+    "id": "ayaneo_air_1s",
+    "label": "AYANEO Air 1S / Pro",
+    "category": "AYANEO (Windows)",
+    "sd_type": "uhs2",
+    "ssd_type": "2280"
+  },
+  {
+    "id": "ayaneo_air_plus",
+    "label": "AYANEO Air Plus",
+    "category": "AYANEO (Windows)",
+    "sd_type": "uhs2",
+    "ssd_type": "2230"
+  },
+  {
+    "id": "ayaneo_next_lite",
+    "label": "AYANEO Next Lite / II",
+    "category": "AYANEO (Windows)",
+    "sd_type": "uhs2",
+    "ssd_type": "2280"
+  },
+
+  {
+    "id": "ayaneo_pocket_evo",
+    "label": "AYANEO Pocket EVO",
+    "category": "AYANEO (Android)",
+    "sd_type": "uhs1",
+    "ssd_type": null
+  },
+  {
+    "id": "ayaneo_pocket_s",
+    "label": "AYANEO Pocket S / S2",
+    "category": "AYANEO (Android)",
+    "sd_type": "uhs1",
+    "ssd_type": null
+  },
+  {
+    "id": "ayaneo_pocket_dmg",
+    "label": "AYANEO Pocket DMG",
+    "category": "AYANEO (Android)",
+    "sd_type": "uhs1",
+    "ssd_type": null
+  },
+  {
+    "id": "ayaneo_pocket_air",
+    "label": "AYANEO Pocket Air",
+    "category": "AYANEO (Android)",
+    "sd_type": "uhs1",
+    "ssd_type": null
+  },
+  {
+    "id": "ayaneo_pocket_micro",
+    "label": "AYANEO Pocket Micro",
+    "category": "AYANEO (Android)",
+    "sd_type": "uhs1",
+    "ssd_type": null
+  },
+
+  {
+    "id": "odin_3",
+    "label": "AYN Odin 3 / Portal",
+    "category": "AYN & Retroid",
+    "sd_type": "uhs1",
+    "ssd_type": null
+  },
+  {
+    "id": "odin_2",
+    "label": "AYN Odin 2 / Mini / Pro",
+    "category": "AYN & Retroid",
+    "sd_type": "uhs1",
+    "ssd_type": null
+  },
+  {
+    "id": "loki_max",
+    "label": "AYN Loki Max / Zero",
+    "category": "AYN & Retroid",
+    "sd_type": "uhs1",
+    "ssd_type": "2230"
+  },
+  {
+    "id": "retroid_6",
+    "label": "Retroid Pocket 6 / 5",
+    "category": "AYN & Retroid",
+    "sd_type": "uhs1",
+    "ssd_type": null
+  },
+  {
+    "id": "retroid_mini",
+    "label": "Retroid Pocket Mini",
+    "category": "AYN & Retroid",
+    "sd_type": "uhs1",
+    "ssd_type": null
+  },
+  {
+    "id": "retroid_4",
+    "label": "Retroid Pocket 4 / 4 Pro",
+    "category": "AYN & Retroid",
+    "sd_type": "uhs1",
+    "ssd_type": null
+  },
+  {
+    "id": "retroid_3",
+    "label": "Retroid Pocket 3+ / Flip",
+    "category": "AYN & Retroid",
+    "sd_type": "uhs1",
+    "ssd_type": null
+  },
+
+  {
+    "id": "rg_cube",
+    "label": "Anbernic RG Cube / CubeXX",
+    "category": "Anbernic",
+    "sd_type": "uhs1",
+    "ssd_type": null
+  },
+  {
+    "id": "rg_556",
+    "label": "Anbernic RG556 / 557",
+    "category": "Anbernic",
+    "sd_type": "uhs1",
+    "ssd_type": null
+  },
+  {
+    "id": "rg_406",
+    "label": "Anbernic RG406 V / H",
+    "category": "Anbernic",
+    "sd_type": "uhs1",
+    "ssd_type": null
+  },
+  {
+    "id": "rg_40xx",
+    "label": "Anbernic RG40XX V / H",
+    "category": "Anbernic",
+    "sd_type": "uhs1",
+    "ssd_type": null
+  },
+  {
+    "id": "rg_35xx_sp",
+    "label": "Anbernic RG35XX SP / Plus",
+    "category": "Anbernic",
+    "sd_type": "uhs1",
+    "ssd_type": null
+  },
+  {
+    "id": "rg_353",
+    "label": "Anbernic RG353 V / M / P",
+    "category": "Anbernic",
+    "sd_type": "uhs1",
+    "ssd_type": null
+  },
+  {
+    "id": "rg_win600",
+    "label": "Anbernic Win600",
+    "category": "Anbernic",
+    "sd_type": "uhs1",
     "ssd_type": "2242"
   },
   {
-    "id": "odin2",
-    "label": "AYN Odin 2 / Mini etc.",
-    "category": "High-End Android",
-    "sd_type": "uhs1",
-    "ssd_type": null
-  },
-  {
-    "id": "retroid",
-    "label": "Retroid Pocket 4/5/6 etc.",
-    "category": "High-End Android",
-    "sd_type": "uhs1",
-    "ssd_type": null
-  },
-  {
-    "id": "anbernic_h",
-    "label": "Anbernic RG35XX / H / SP etc.",
-    "category": "Retro Linux",
-    "sd_type": "uhs1",
-    "ssd_type": null
-  },
-  {
-    "id": "powkiddy",
-    "label": "Powkiddy RGB30 / V10 etc.",
-    "category": "Retro Linux",
-    "sd_type": "uhs1",
-    "ssd_type": null
-  },
-  {
-    "id": "miyoo",
-    "label": "Miyoo Mini / Plus etc.",
-    "category": "Retro Linux",
-    "sd_type": "uhs1",
-    "ssd_type": null
-  },
-  {
-    "id": "analogue",
-    "label": "Analogue Pocket",
-    "category": "FPGA",
+    "id": "konkr_fit",
+    "label": "KONKR Pocket FIT",
+    "category": "Other Devices",
     "sd_type": "uhs1",
     "ssd_type": null
   }
