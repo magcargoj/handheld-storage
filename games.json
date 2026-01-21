@@ -1,891 +1,2453 @@
 [
   {
-    "id": "7days",
-    "title": "7 Days to Die",
+    "id": "super_mario_bros._wonder",
+    "title": "Super Mario Bros. Wonder",
     "sizes": {
-      "pc": 15,
+      "pc": null,
       "switch2": null,
-      "switch": null,
+      "switch": 3.572,
       "android": null
     },
-    "tags": [
-      "survival",
-      "zombie"
-    ]
+    "tags": []
   },
   {
-    "id": "age2",
-    "title": "Age of Empires II: DE",
-    "sizes": {
-      "pc": 15,
-      "switch2": null,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "strategy",
-      "rts"
-    ]
-  },
-  {
-    "id": "among_us",
-    "title": "Among Us",
-    "sizes": {
-      "pc": 0.5,
-      "switch2": 1.2,
-      "switch": 1.2,
-      "android": 0.25
-    },
-    "tags": [
-      "social",
-      "casual",
-      "indie"
-    ]
-  },
-  {
-    "id": "apex",
-    "title": "Apex Legends",
-    "sizes": {
-      "pc": 86.63,
-      "switch2": 83.2,
-      "switch": 29.3,
-      "android": null
-    },
-    "tags": [
-      "battle royale",
-      "fps",
-      "scifi"
-    ]
-  },
-  {
-    "id": "ark_ascended",
-    "title": "ARK: Survival Ascended",
-    "sizes": {
-      "pc": 174.68,
-      "switch2": 7.5,
-      "switch": 7.5,
-      "android": null
-    },
-    "tags": [
-      "survival",
-      "dinosaur"
-    ]
-  },
-  {
-    "id": "balatro",
-    "title": "Balatro",
-    "sizes": {
-      "pc": 0.06357,
-      "switch2": 0.179,
-      "switch": 0.179,
-      "android": 0.06159
-    },
-    "tags": [
-      "card",
-      "roguelike",
-      "indie"
-    ]
-  },
-  {
-    "id": "bg3",
+    "id": "1086940",
     "title": "Baldur's Gate 3",
     "sizes": {
-      "pc": 144.01,
+      "pc": 150.0,
       "switch2": null,
       "switch": null,
       "android": null
     },
-    "tags": [
-      "rpg",
-      "dnd",
-      "strategy"
-    ]
+    "tags": []
   },
   {
-    "id": "bf6",
-    "title": "Battlefield 6",
-    "sizes": {
-      "pc": 101.85,
-      "switch2": null,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "fps",
-      "shooter",
-      "war"
-    ]
-  },
-  {
-    "id": "beamng",
-    "title": "BeamNG.drive",
-    "sizes": {
-      "pc": 47.84,
-      "switch2": null,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "simulation",
-      "driving"
-    ]
-  },
-  {
-    "id": "brawlhalla",
-    "title": "Brawlhalla",
-    "sizes": {
-      "pc": 1.24,
-      "switch2": 2.2,
-      "switch": 2.2,
-      "android": 1.3
-    },
-    "tags": [
-      "fighting",
-      "platformer"
-    ]
-  },
-  {
-    "id": "cod_bo3",
-    "title": "Call of Duty: Black Ops III",
-    "sizes": {
-      "pc": 50,
-      "switch2": null,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "fps",
-      "shooter",
-      "action"
-    ]
-  },
-  {
-    "id": "civ6",
-    "title": "Civilization VI",
-    "sizes": {
-      "pc": 18.2,
-      "switch2": 17,
-      "switch": 17,
-      "android": 5
-    },
-    "tags": [
-      "strategy",
-      "4x"
-    ]
-  },
-  {
-    "id": "civ7",
-    "title": "Civilization VII",
-    "sizes": {
-      "pc": 17.65,
-      "switch2": 16.7,
-      "switch": 7,
-      "android": null
-    },
-    "tags": [
-      ""
-    ]
-  },
-  {
-    "id": "cs2",
-    "title": "Counter-Strike 2",
-    "sizes": {
-      "pc": 48.2,
-      "switch2": null,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "fps",
-      "multiplayer",
-      "valve"
-    ]
-  },
-  {
-    "id": "cp2077",
-    "title": "Cyberpunk 2077",
-    "sizes": {
-      "pc": 61.81,
-      "switch2": 60.6,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "open world",
-      "rpg",
-      "scifi"
-    ]
-  },
-  {
-    "id": "dayz",
-    "title": "DayZ",
-    "sizes": {
-      "pc": 23.41,
-      "switch2": null,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "survival",
-      "fps"
-    ]
-  },
-  {
-    "id": "dbd",
-    "title": "Dead by Daylight",
-    "sizes": {
-      "pc": 54.44,
-      "switch2": 22.8,
-      "switch": 22.8,
-      "android": 2.11
-    },
-    "tags": [
-      "horror",
-      "multiplayer"
-    ]
-  },
-  {
-    "id": "deadlock",
-    "title": "Deadlock",
-    "sizes": {
-      "pc": 28.25,
-      "switch2": null,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "moba",
-      "shooter",
-      "valve"
-    ]
-  },
-  {
-    "id": "destiny2",
-    "title": "Destiny 2",
-    "sizes": {
-      "pc": 141.67,
-      "switch2": null,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "fps",
-      "looter",
-      "mmo"
-    ]
-  },
-  {
-    "id": "dota2",
-    "title": "Dota 2",
-    "sizes": {
-      "pc": 54.04,
-      "switch2": null,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "moba",
-      "strategy",
-      "valve"
-    ]
-  },
-  {
-    "id": "fc26",
-    "title": "EA SPORTS FC 26",
-    "sizes": {
-      "pc": 52.14,
-      "switch2": 34.1,
-      "switch": 34.1,
-      "android": 7
-    },
-    "tags": [
-      "sports",
-      "soccer"
-    ]
-  },
-  {
-    "id": "elden_ring",
-    "title": "ELDEN RING",
-    "sizes": {
-      "pc": 51.1,
-      "switch2": null,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "rpg",
-      "souls",
-      "open world"
-    ]
-  },
-  {
-    "id": "fallout4",
-    "title": "Fallout 4",
-    "sizes": {
-      "pc": 58.3,
-      "switch2": null,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "rpg",
-      "open world",
-      "post-apoc"
-    ]
-  },
-  {
-    "id": "farming25",
-    "title": "Farming Simulator 25",
-    "sizes": {
-      "pc": 38.94,
-      "switch2": null,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "simulation",
-      "farming"
-    ]
-  },
-  {
-    "id": "fm26",
-    "title": "Football Manager 26",
-    "sizes": {
-      "pc": 7.16,
-      "switch2": null,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "sports",
-      "simulation"
-    ]
-  },
-  {
-    "id": "forza5",
-    "title": "Forza Horizon 5",
-    "sizes": {
-      "pc": 148.21,
-      "switch2": null,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "racing",
-      "cars"
-    ]
-  },
-  {
-    "id": "garrys_mod",
-    "title": "Garry's Mod",
-    "sizes": {
-      "pc": 6.31,
-      "switch2": null,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "sandbox",
-      "valve"
-    ]
-  },
-  {
-    "id": "gta5",
-    "title": "Grand Theft Auto V",
-    "sizes": {
-      "pc": 110,
-      "switch2": null,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "open world",
-      "crime",
-      "action"
-    ]
-  },
-  {
-    "id": "helldivers2",
-    "title": "HELLDIVERS 2",
-    "sizes": {
-      "pc": 130.53,
-      "switch2": null,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "scifi",
-      "shooter",
-      "coop"
-    ]
-  },
-  {
-    "id": "hogwarts",
-    "title": "Hogwarts Legacy",
-    "sizes": {
-      "pc": 68.97,
-      "switch2": 23.1,
-      "switch": 17.1,
-      "android": null
-    },
-    "tags": [
-      "adventure"
-    ]
-  },
-  {
-    "id": "hollow_knight",
-    "title": "Hollow Knight",
-    "sizes": {
-      "pc": 7.43,
-      "switch2": 5.3,
-      "switch": 5.3,
-      "android": null
-    },
-    "tags": [
-      "indie",
-      "platformer",
-      "metroidvania"
-    ]
-  },
-  {
-    "id": "silksong",
-    "title": "Hollow Knight: Silksong",
-    "sizes": {
-      "pc": 7.57,
-      "switch2": 4.1,
-      "switch": 2.8,
-      "android": null
-    },
-    "tags": [
-      "indie",
-      "platformer",
-      "metroidvania"
-    ]
-  },
-  {
-    "id": "kcd2",
-    "title": "Kingdom Come: Deliverance II",
-    "sizes": {
-      "pc": 90,
-      "switch2": null,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "rpg",
-      "medieval",
-      "realistic"
-    ]
-  },
-  {
-    "id": "l4d2",
-    "title": "Left 4 Dead 2",
-    "sizes": {
-      "pc": 15,
-      "switch2": null,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "zombie",
-      "fps",
-      "valve"
-    ]
-  },
-  {
-    "id": "marvel_rivals",
-    "title": "Marvel Rivals",
-    "sizes": {
-      "pc": 91.6,
-      "switch2": null,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "shooter",
-      "hero",
-      "multiplayer"
-    ]
-  },
-  {
-    "id": "mh_wilds",
-    "title": "Monster Hunter Wilds",
-    "sizes": {
-      "pc": 90,
-      "switch2": 70,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "action",
-      "rpg",
-      "hunting"
-    ]
-  },
-  {
-    "id": "naraka",
-    "title": "NARAKA: BLADEPOINT",
-    "sizes": {
-      "pc": 35,
-      "switch2": 30,
-      "switch": null,
-      "android": null
-    },
-    "tags": [
-      "battle royale",
-      "melee"
-    ]
-  },
-  {
-    "id": "nba2k26",
-    "title": "NBA 2K26",
-    "sizes": {
-      "pc": 160,
-      "switch2": 60,
-      "switch": 60,
-      "android": null
-    },
-    "tags": [
-      "sports",
-      "basketball"
-    ]
-  },
-  {
-    "id": "ow2",
+    "id": "2357570",
     "title": "Overwatch 2",
     "sizes": {
-      "pc": 50,
-      "switch2": 40,
-      "switch": 30,
+      "pc": 50.0,
+      "switch2": null,
+      "switch": 26.642,
+      "android": null
+    },
+    "tags": []
+  },
+  {
+    "id": "1962663",
+    "title": "Call of Duty: Warzone",
+    "sizes": {
+      "pc": 125.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": []
+  },
+  {
+    "id": "genshin_impact",
+    "title": "Genshin Impact",
+    "sizes": {
+      "pc": 75.0,
+      "switch2": 50.0,
+      "switch": null,
       "android": null
     },
     "tags": [
-      "fps",
-      "hero",
-      "blizzard"
+      "Manual"
     ]
   },
   {
-    "id": "palworld",
+    "id": "945360",
+    "title": "Among Us",
+    "sizes": {
+      "pc": 4.0,
+      "switch2": null,
+      "switch": 1.15,
+      "android": null
+    },
+    "tags": [
+      "Casual"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "animal_crossing:_new_horizons",
+    "title": "Animal Crossing: New Horizons",
+    "sizes": {
+      "pc": null,
+      "switch2": 10.502,
+      "switch": 10.502,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1172470",
+    "title": "Apex Legends",
+    "sizes": {
+      "pc": 75.0,
+      "switch2": null,
+      "switch": 4.087,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "Free To Play"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "346110",
+    "title": "ARK: Survival Evolved",
+    "sizes": {
+      "pc": 60.0,
+      "switch2": null,
+      "switch": 7.455,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Massively Multiplayer",
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "911400",
+    "title": "Assassin\u2019s Creed III Remastered",
+    "sizes": {
+      "pc": 45.0,
+      "switch2": null,
+      "switch": 14.682,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "812140",
+    "title": "Assassin\u2019s Creed Odyssey",
+    "sizes": {
+      "pc": 8.0,
+      "switch2": null,
+      "switch": 0.08,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "2208920",
+    "title": "Assassin\u2019s Creed Valhalla",
+    "sizes": {
+      "pc": 160.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "2379780",
+    "title": "Balatro",
+    "sizes": {
+      "pc": 1.0,
+      "switch2": null,
+      "switch": 0.17,
+      "android": null
+    },
+    "tags": [
+      "Casual",
+      "Indie",
+      "Strategy"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1086940",
+    "title": "Baldur\u2019s Gate 3",
+    "sizes": {
+      "pc": 150.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Adventure",
+      "RPG",
+      "Strategy"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "452570",
+    "title": "Battle Chef Brigade",
+    "sizes": {
+      "pc": 4.0,
+      "switch2": null,
+      "switch": 1.699,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1238840",
+    "title": "Battlefield 1",
+    "sizes": {
+      "pc": 50.0,
+      "switch2": null,
+      "switch": 4.189,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Massively Multiplayer"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1238810",
+    "title": "Battlefield V",
+    "sizes": {
+      "pc": 50.0,
+      "switch2": null,
+      "switch": 1.975,
+      "android": null
+    },
+    "tags": [
+      "Action"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "960090",
+    "title": "Bloons TD 6",
+    "sizes": {
+      "pc": 8.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Strategy"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "borderlands_legendary_collection",
+    "title": "Borderlands Legendary Collection",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 21.882,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1938090",
+    "title": "Call of Duty",
+    "sizes": {
+      "pc": 161.0,
+      "switch2": null,
+      "switch": 1.625,
+      "android": null
+    },
+    "tags": [
+      "Action"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "504230",
+    "title": "Celeste",
+    "sizes": {
+      "pc": 2.0,
+      "switch2": null,
+      "switch": 1.541,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "255710",
+    "title": "Cities: Skylines",
+    "sizes": {
+      "pc": 16.0,
+      "switch2": null,
+      "switch": 2.206,
+      "android": null
+    },
+    "tags": [
+      "Simulation",
+      "Strategy"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1578650",
+    "title": "Citizen Sleeper",
+    "sizes": {
+      "pc": 4.0,
+      "switch2": null,
+      "switch": 1.583,
+      "android": null
+    },
+    "tags": [
+      "Adventure",
+      "Indie",
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "8930",
+    "title": "Civilization V",
+    "sizes": {
+      "pc": 8.0,
+      "switch2": null,
+      "switch": 6.95,
+      "android": null
+    },
+    "tags": [
+      "Strategy"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "clubhouse_games_51_worldwide_classics",
+    "title": "Clubhouse Games: 51 Worldwide Classics",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 2.463,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "730",
+    "title": "Counter-Strike 2",
+    "sizes": {
+      "pc": 85.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Free To Play"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "240",
+    "title": "Counter-Strike: Source",
+    "sizes": {
+      "pc": 1.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Action"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "731490",
+    "title": "Crash Bandicoot N. Sane Trilogy",
+    "sizes": {
+      "pc": 30.0,
+      "switch2": null,
+      "switch": 5.26,
+      "android": null
+    },
+    "tags": [
+      "Action"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1158310",
+    "title": "Crusader Kings III",
+    "sizes": {
+      "pc": 20.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "RPG",
+      "Simulation",
+      "Strategy"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "268910",
+    "title": "Cuphead",
+    "sizes": {
+      "pc": 4.0,
+      "switch2": null,
+      "switch": 3.553,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Indie"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1091500",
+    "title": "Cyberpunk 2077",
+    "sizes": {
+      "pc": 70.0,
+      "switch2": null,
+      "switch": 60.593,
+      "android": null
+    },
+    "tags": [
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "374320",
+    "title": "Dark Souls III",
+    "sizes": {
+      "pc": 25.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Action"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "570940",
+    "title": "Dark Souls: Remastered",
+    "sizes": {
+      "pc": 8.0,
+      "switch2": null,
+      "switch": 3.989,
+      "android": null
+    },
+    "tags": [
+      "Action"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "darksiders_warmastered_/_genesis",
+    "title": "Darksiders Warmastered / Genesis",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "381210",
+    "title": "Dead by Daylight",
+    "sizes": {
+      "pc": 50.0,
+      "switch2": null,
+      "switch": 22.808,
+      "android": null
+    },
+    "tags": [
+      "Action"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "588650",
+    "title": "Dead Cells",
+    "sizes": {
+      "pc": 4.0,
+      "switch2": null,
+      "switch": 2.4,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1671210",
+    "title": "Deltarune",
+    "sizes": {
+      "pc": 4.0,
+      "switch2": null,
+      "switch": 0.71,
+      "android": null
+    },
+    "tags": [
+      "Indie",
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "548430",
+    "title": "Deep Rock Galactic",
+    "sizes": {
+      "pc": 8.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Action"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1085660",
+    "title": "Destiny 2",
+    "sizes": {
+      "pc": 105.0,
+      "switch2": null,
+      "switch": 14.243,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "Free To Play"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "disgaea_5_/_6",
+    "title": "Disgaea 5 / 6",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "donkey_kong_country_tropical_freeze",
+    "title": "Donkey Kong Country: Tropical Freeze",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 6.671,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "570",
+    "title": "Dota 2",
+    "sizes": {
+      "pc": 60.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Strategy",
+      "Free To Play"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1295510",
+    "title": "Dragon Quest XI S",
+    "sizes": {
+      "pc": 40.0,
+      "switch2": null,
+      "switch": 13.974,
+      "android": null
+    },
+    "tags": [
+      "Adventure",
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "367500",
+    "title": "Dragon\u2019s Dogma: Dark Arisen",
+    "sizes": {
+      "pc": 20.0,
+      "switch2": null,
+      "switch": 12.145,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "2669320",
+    "title": "EA Sports FC (FIFA)",
+    "sizes": {
+      "pc": 100.0,
+      "switch2": null,
+      "switch": 32.119,
+      "android": null
+    },
+    "tags": [
+      "Simulation",
+      "Sports"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "ea_sports_fc_24",
+    "title": "EA Sports FC 24",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 31.088,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1245620",
+    "title": "Elden Ring",
+    "sizes": {
+      "pc": 60.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "236850",
+    "title": "Europa Universalis IV",
+    "sizes": {
+      "pc": 8.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Simulation",
+      "Strategy"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "427520",
+    "title": "Factorio",
+    "sizes": {
+      "pc": 16.0,
+      "switch2": 0.0,
+      "switch": 2.574,
+      "android": null
+    },
+    "tags": [
+      "Casual",
+      "Indie",
+      "Simulation",
+      "Strategy"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "fall_guys",
+    "title": "Fall Guys",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 2.419,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "377160",
+    "title": "Fallout 4",
+    "sizes": {
+      "pc": 30.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "22380",
+    "title": "Fallout: New Vegas",
+    "sizes": {
+      "pc": 10.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "fifa_23",
+    "title": "FIFA 23",
+    "sizes": {
+      "pc": null,
+      "switch2": 0.5,
+      "switch": 13.9,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "final_fantasy_vii_/_viii_/_ix",
+    "title": "Final Fantasy VII / VIII / IX",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "359870",
+    "title": "Final Fantasy X / X-2 HD Remaster",
+    "sizes": {
+      "pc": 40.0,
+      "switch2": null,
+      "switch": 14.029,
+      "android": null
+    },
+    "tags": [
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "fire_emblem_engage",
+    "title": "Fire Emblem Engage",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 16.582,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "fire_emblem_warriors",
+    "title": "Fire Emblem Warriors",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 13.396,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "fire_emblem_three_houses",
+    "title": "Fire Emblem: Three Houses",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 11.551,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "2473420",
+    "title": "Football Manager 2024",
+    "sizes": {
+      "pc": 7.0,
+      "switch2": null,
+      "switch": 5.804,
+      "android": null
+    },
+    "tags": [
+      "Simulation",
+      "Sports",
+      "Strategy"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "fortnite",
+    "title": "Fortnite",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 85.538,
+      "android": null
+    },
+    "tags": [
+      "Manual"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1551360",
+    "title": "Forza Horizon 5",
+    "sizes": {
+      "pc": 110.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "Racing",
+      "Simulation",
+      "Sports"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "4000",
+    "title": "Garry\u2019s Mod",
+    "sizes": {
+      "pc": 25.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Casual",
+      "Indie",
+      "Simulation"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "3240220",
+    "title": "Grand Theft Auto V",
+    "sizes": {
+      "pc": 105.0,
+      "switch2": null,
+      "switch": 22.806,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "Racing"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "gta_online",
+    "title": "GTA Online",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1145350",
+    "title": "Hades",
+    "sizes": {
+      "pc": 16.0,
+      "switch2": 6.581,
+      "switch": 5.771,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Indie",
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "220",
+    "title": "Half-Life 2",
+    "sizes": {
+      "pc": 6.35,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Action"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "394360",
+    "title": "Hearts of Iron IV",
+    "sizes": {
+      "pc": 6.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Simulation",
+      "Strategy"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "990080",
+    "title": "Hogwarts Legacy",
+    "sizes": {
+      "pc": 85.0,
+      "switch2": null,
+      "switch": 17.086,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "367520",
+    "title": "Hollow Knight",
+    "sizes": {
+      "pc": 9.0,
+      "switch2": 2.822,
+      "switch": 5.296,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "hotline_miami_collection",
+    "title": "Hotline Miami Collection",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 1.237,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "477160",
+    "title": "Human: Fall Flat",
+    "sizes": {
+      "pc": 2.0,
+      "switch2": null,
+      "switch": 2.098,
+      "android": null
+    },
+    "tags": [
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Simulation"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "460950",
+    "title": "Katana Zero",
+    "sizes": {
+      "pc": 2.0,
+      "switch2": null,
+      "switch": 0.35,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Indie"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "kirby_and_the_forgotten_land",
+    "title": "Kirby and the Forgotten Land",
+    "sizes": {
+      "pc": null,
+      "switch2": 5.807,
+      "switch": 5.807,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "kirby_star_allies",
+    "title": "Kirby Star Allies",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 3.951,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "550",
+    "title": "Left 4 Dead 2",
+    "sizes": {
+      "pc": 13.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Action"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1966720",
+    "title": "Lethal Company",
+    "sizes": {
+      "pc": 2.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Early Access"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "little_nightmares_i_&_ii",
+    "title": "Little Nightmares I & II",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 6.57,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1599340",
+    "title": "Lost Ark",
+    "sizes": {
+      "pc": 110.0,
+      "switch2": null,
+      "switch": 1.2,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "Massively Multiplayer",
+      "RPG",
+      "Free To Play"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "luigi\u2019s_mansion_3",
+    "title": "Luigi\u2019s Mansion 3",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 7.375,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "mario_+_rabbids_kingdom_battle",
+    "title": "Mario + Rabbids Kingdom Battle",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 2.91,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "mario_kart_8_deluxe",
+    "title": "Mario Kart 8 Deluxe",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 11.253,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "mario_party_superstars",
+    "title": "Mario Party Superstars",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 2.857,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "mario_tennis_aces",
+    "title": "Mario Tennis Aces",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 2.43,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "287700",
+    "title": "Metal Gear Solid V: The Phantom Pain",
+    "sizes": {
+      "pc": 28.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "metro_redux_collection",
+    "title": "Metro Redux Collection",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "metroid_dread",
+    "title": "Metroid Dread",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 4.276,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "metroid_prime_remastered",
+    "title": "Metroid Prime Remastered",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 6.77,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1672970",
+    "title": "Minecraft",
+    "sizes": {
+      "pc": 8.0,
+      "switch2": 0.0,
+      "switch": 1.572,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1446780",
+    "title": "Monster Hunter Rise",
+    "sizes": {
+      "pc": 36.0,
+      "switch2": null,
+      "switch": 19.771,
+      "android": null
+    },
+    "tags": [
+      "Action"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1277400",
+    "title": "Monster Hunter Stories 2",
+    "sizes": {
+      "pc": 28.0,
+      "switch2": null,
+      "switch": 14.325,
+      "android": null
+    },
+    "tags": [
+      "Adventure",
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "582010",
+    "title": "Monster Hunter: World",
+    "sizes": {
+      "pc": 52.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Action"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "976310",
+    "title": "Mortal Kombat 11",
+    "sizes": {
+      "pc": 8.0,
+      "switch2": null,
+      "switch": 32.498,
+      "android": null
+    },
+    "tags": [
+      "Action"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "261550",
+    "title": "Mount & Blade II: Bannerlord",
+    "sizes": {
+      "pc": 60.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Indie",
+      "RPG",
+      "Simulation",
+      "Strategy"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "nba_2k24",
+    "title": "NBA 2K24",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 59.151,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "new_super_mario_bros._u_deluxe",
+    "title": "New Super Mario Bros. U Deluxe",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 2.529,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "798460",
+    "title": "Ni no Kuni: Wrath of the White Witch",
+    "sizes": {
+      "pc": 45.0,
+      "switch2": null,
+      "switch": 5.775,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "nintendo_switch_sports",
+    "title": "Nintendo Switch Sports",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 3.247,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "275850",
+    "title": "No Man\u2019s Sky",
+    "sizes": {
+      "pc": 15.0,
+      "switch2": null,
+      "switch": 6.824,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "3014320",
+    "title": "Octopath Traveler",
+    "sizes": {
+      "pc": 16.0,
+      "switch2": null,
+      "switch": 6.087,
+      "android": null
+    },
+    "tags": [
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1057090",
+    "title": "Ori and the Will of the Wisps",
+    "sizes": {
+      "pc": 20.0,
+      "switch2": null,
+      "switch": 4.339,
+      "android": null
+    },
+    "tags": [
+      "Action"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1623730",
     "title": "Palworld",
     "sizes": {
-      "pc": 20,
-      "switch2": 18,
+      "pc": 40.0,
+      "switch2": null,
       "switch": null,
       "android": null
     },
     "tags": [
-      "survival",
-      "creature",
-      "open world"
-    ]
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Early Access"
+    ],
+    "last_updated": "2026-01-21"
   },
   {
-    "id": "poe2",
-    "title": "Path of Exile 2",
+    "id": "paper_mario_the_origami_king",
+    "title": "Paper Mario: The Origami King",
     "sizes": {
-      "pc": 60,
-      "switch2": 50,
+      "pc": null,
+      "switch2": null,
+      "switch": 6.505,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "2694490",
+    "title": "Path of Exile",
+    "sizes": {
+      "pc": 100.0,
+      "switch2": null,
       "switch": null,
       "android": null
     },
     "tags": [
-      "arpg",
-      "rpg",
-      "free"
-    ]
+      "Action",
+      "Adventure",
+      "Massively Multiplayer",
+      "RPG",
+      "Early Access"
+    ],
+    "last_updated": "2026-01-21"
   },
   {
-    "id": "phasmophobia",
+    "id": "218620",
+    "title": "Payday 2",
+    "sizes": {
+      "pc": 83.0,
+      "switch2": null,
+      "switch": 9.848,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1687950",
+    "title": "Persona 5 Royal",
+    "sizes": {
+      "pc": 41.0,
+      "switch2": null,
+      "switch": 14.229,
+      "android": null
+    },
+    "tags": [
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "739630",
     "title": "Phasmophobia",
     "sizes": {
-      "pc": 20,
-      "switch2": 18,
-      "switch": null,
+      "pc": 21.0,
+      "switch2": null,
+      "switch": 14.042,
       "android": null
     },
     "tags": [
-      "horror",
-      "coop"
-    ]
+      "Action",
+      "Indie",
+      "Early Access"
+    ],
+    "last_updated": "2026-01-21"
   },
   {
-    "id": "project_zomboid",
+    "id": "pikmin_4",
+    "title": "Pikmin 4",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 11.257,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "pok\u00e9mon_legends_arceus",
+    "title": "Pok\u00e9mon Legends: Arceus",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 6.116,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "pok\u00e9mon_legends_z-a",
+    "title": "Pok\u00e9mon Legends: Z-A",
+    "sizes": {
+      "pc": null,
+      "switch2": 6.018,
+      "switch": 6.018,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "pok\u00e9mon_let\u2019s_go,_pikachu!_/_eevee!",
+    "title": "Pok\u00e9mon Let\u2019s Go, Pikachu! / Eevee!",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 0.0,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "pok\u00e9mon_scarlet_and_violet",
+    "title": "Pok\u00e9mon Scarlet and Violet",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 13.568,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "pok\u00e9mon_sword_and_shield",
+    "title": "Pok\u00e9mon Sword and Shield",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "620",
+    "title": "Portal 2",
+    "sizes": {
+      "pc": 8.0,
+      "switch2": null,
+      "switch": 7.344,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "powerwash_simulator",
+    "title": "PowerWash Simulator",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 4.487,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "108600",
     "title": "Project Zomboid",
     "sizes": {
-      "pc": 5,
-      "switch2": 5,
+      "pc": 8.0,
+      "switch2": null,
       "switch": null,
       "android": null
     },
     "tags": [
-      "survival",
-      "zombie",
-      "indie"
-    ]
+      "Indie",
+      "RPG",
+      "Simulation",
+      "Early Access"
+    ],
+    "last_updated": "2026-01-21"
   },
   {
-    "id": "pubg",
-    "title": "PUBG: BATTLEGROUNDS",
+    "id": "578080",
+    "title": "PUBG: Battlegrounds",
     "sizes": {
-      "pc": 40,
-      "switch2": 30,
+      "pc": 50.0,
+      "switch2": null,
       "switch": null,
       "android": null
     },
     "tags": [
-      "battle royale",
-      "shooter"
-    ]
+      "Action",
+      "Adventure",
+      "Massively Multiplayer",
+      "Free To Play"
+    ],
+    "last_updated": "2026-01-21"
   },
   {
-    "id": "r6",
-    "title": "Rainbow Six Siege",
+    "id": "1395780",
+    "title": "Punch-Out!!",
     "sizes": {
-      "pc": 60,
-      "switch2": 45,
-      "switch": null,
+      "pc": 8.0,
+      "switch2": null,
+      "switch": 0.1,
       "android": null
     },
     "tags": [
-      "fps",
-      "tactical",
-      "shooter"
-    ]
+      "Action",
+      "Indie",
+      "Sports",
+      "Early Access"
+    ],
+    "last_updated": "2026-01-21"
   },
   {
-    "id": "rdr2",
+    "id": "rayman_legends_definitive_edition",
+    "title": "Rayman Legends: Definitive Edition",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 2.951,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1174180",
     "title": "Red Dead Redemption 2",
     "sizes": {
-      "pc": 120,
-      "switch2": 90,
-      "switch": null,
+      "pc": 150.0,
+      "switch2": null,
+      "switch": 11.615,
       "android": null
     },
     "tags": [
-      "open world",
-      "cowboy",
-      "story"
-    ]
+      "Action",
+      "Adventure"
+    ],
+    "last_updated": "2026-01-21"
   },
   {
-    "id": "rimworld",
+    "id": "resident_evil_4_remake",
+    "title": "Resident Evil 4 Remake",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "294100",
     "title": "RimWorld",
     "sizes": {
-      "pc": 1,
-      "switch2": 1,
+      "pc": 4.0,
+      "switch2": null,
       "switch": null,
       "android": null
     },
     "tags": [
-      "simulation",
-      "colony",
-      "indie"
-    ]
+      "Indie",
+      "Simulation",
+      "Strategy"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "ring_fit_adventure",
+    "title": "Ring Fit Adventure",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 3.325,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
   },
   {
     "id": "rocket_league",
     "title": "Rocket League",
     "sizes": {
-      "pc": 25,
-      "switch2": 20,
-      "switch": 15,
+      "pc": null,
+      "switch2": null,
+      "switch": 1.167,
       "android": null
     },
     "tags": [
-      "sports",
-      "cars"
-    ]
+      "Manual"
+    ],
+    "last_updated": "2026-01-21"
   },
   {
-    "id": "rust",
+    "id": "252490",
     "title": "Rust",
     "sizes": {
-      "pc": 35,
+      "pc": 45.0,
+      "switch2": null,
+      "switch": 1.808,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Massively Multiplayer",
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "526870",
+    "title": "Satisfactory",
+    "sizes": {
+      "pc": 20.0,
       "switch2": null,
       "switch": null,
       "android": null
     },
     "tags": [
-      "survival",
-      "multiplayer"
-    ]
+      "Adventure",
+      "Indie",
+      "Simulation",
+      "Strategy"
+    ],
+    "last_updated": "2026-01-21"
   },
   {
-    "id": "skyrim",
+    "id": "1122720",
+    "title": "Sayonara Wild Hearts",
+    "sizes": {
+      "pc": 4.0,
+      "switch2": null,
+      "switch": 1.194,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Casual"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1172620",
+    "title": "Sea of Thieves",
+    "sizes": {
+      "pc": 100.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "814380",
+    "title": "Sekiro: Shadows Die Twice",
+    "sizes": {
+      "pc": 25.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1875830",
+    "title": "Shin Megami Tensei V",
+    "sizes": {
+      "pc": 30.0,
+      "switch2": null,
+      "switch": 12.927,
+      "android": null
+    },
+    "tags": [
+      "Adventure",
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "250760",
+    "title": "Shovel Knight: Treasure Trove",
+    "sizes": {
+      "pc": 2.0,
+      "switch2": null,
+      "switch": 0.3,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "289070",
+    "title": "Sid Meier\u2019s Civilization VI",
+    "sizes": {
+      "pc": 23.0,
+      "switch2": null,
+      "switch": 6.95,
+      "android": null
+    },
+    "tags": [
+      "Strategy"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "489830",
     "title": "Skyrim Special Edition",
     "sizes": {
-      "pc": 15,
-      "switch2": 15,
-      "switch": 15,
+      "pc": 12.0,
+      "switch2": null,
+      "switch": null,
       "android": null
     },
     "tags": [
-      "rpg",
-      "fantasy",
-      "open world"
-    ]
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
   },
   {
-    "id": "slay_spire",
+    "id": "2868840",
     "title": "Slay the Spire",
     "sizes": {
-      "pc": 1,
-      "switch2": 1,
-      "switch": 1,
+      "pc": null,
+      "switch2": null,
+      "switch": 0.53,
       "android": null
     },
     "tags": [
-      "card",
-      "roguelike",
-      "indie"
-    ]
+      "Indie",
+      "Strategy"
+    ],
+    "last_updated": "2026-01-21"
   },
   {
-    "id": "stardew",
+    "id": "1326470",
+    "title": "Sons of the Forest",
+    "sizes": {
+      "pc": 20.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Simulation"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "213670",
+    "title": "South Park: The Stick of Truth",
+    "sizes": {
+      "pc": 6.0,
+      "switch2": null,
+      "switch": 5.55,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "splatoon_2",
+    "title": "Splatoon 2",
+    "sizes": {
+      "pc": null,
+      "switch2": 6.117,
+      "switch": 6.117,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "splatoon_3",
+    "title": "Splatoon 3",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 9.87,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "413150",
     "title": "Stardew Valley",
     "sizes": {
-      "pc": 1,
-      "switch2": 1,
-      "switch": 1,
+      "pc": 2.0,
+      "switch2": 0.0,
+      "switch": 1.62,
       "android": null
     },
     "tags": [
-      "farming",
-      "indie",
-      "rpg"
-    ]
+      "Indie",
+      "RPG",
+      "Simulation"
+    ],
+    "last_updated": "2026-01-21"
   },
   {
-    "id": "sf6",
-    "title": "Street Fighter 6",
+    "id": "985890",
+    "title": "Streets of Rage 4",
     "sizes": {
-      "pc": 60,
-      "switch2": 45,
-      "switch": null,
+      "pc": 10.0,
+      "switch2": null,
+      "switch": 3.915,
       "android": null
     },
     "tags": [
-      "fighting",
-      "capcom"
-    ]
+      "Action",
+      "Indie"
+    ],
+    "last_updated": "2026-01-21"
   },
   {
-    "id": "tf2",
+    "id": "1962700",
+    "title": "Subnautica",
+    "sizes": {
+      "pc": 50.0,
+      "switch2": null,
+      "switch": 6.004,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "Early Access"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "848450",
+    "title": "Subnautica: Below Zero",
+    "sizes": {
+      "pc": 15.0,
+      "switch2": null,
+      "switch": 13.085,
+      "android": null
+    },
+    "tags": [
+      "Adventure",
+      "Indie"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "2723190",
+    "title": "Suika Game",
+    "sizes": {
+      "pc": 6.0,
+      "switch2": null,
+      "switch": 1.608,
+      "android": null
+    },
+    "tags": [
+      "Strategy"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "super_mario_3d_world_+_bowser\u2019s_fury",
+    "title": "Super Mario 3D World + Bowser\u2019s Fury",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 2.97,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "super_mario_maker_2",
+    "title": "Super Mario Maker 2",
+    "sizes": {
+      "pc": null,
+      "switch2": 3.06,
+      "switch": 3.06,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "super_mario_odyssey",
+    "title": "Super Mario Odyssey",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 5.609,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "super_mario_party",
+    "title": "Super Mario Party",
+    "sizes": {
+      "pc": null,
+      "switch2": 5.366,
+      "switch": 2.904,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "super_smash_bros._ultimate",
+    "title": "Super Smash Bros. Ultimate",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 17.308,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "taiko_no_tatsujin_drum_\u2019n\u2019_fun!",
+    "title": "Taiko no Tatsujin: Drum \u2019n\u2019 Fun!",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 0.01,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "440",
     "title": "Team Fortress 2",
     "sizes": {
-      "pc": 25,
+      "pc": 15.0,
       "switch2": null,
-      "switch": null,
+      "switch": 0.0,
       "android": null
     },
     "tags": [
-      "fps",
-      "class based",
-      "valve"
-    ]
+      "Action",
+      "Free To Play"
+    ],
+    "last_updated": "2026-01-21"
   },
   {
-    "id": "terraria",
+    "id": "105600",
     "title": "Terraria",
     "sizes": {
-      "pc": 1,
-      "switch2": 1,
-      "switch": 1,
+      "pc": 4.0,
+      "switch2": null,
+      "switch": 0.44,
       "android": null
     },
     "tags": [
-      "indie",
-      "sandbox",
-      "adventure"
-    ]
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
   },
   {
-    "id": "finals",
-    "title": "THE FINALS",
+    "id": "the_banner_saga_trilogy",
+    "title": "The Banner Saga Trilogy",
     "sizes": {
-      "pc": 20,
-      "switch2": 18,
+      "pc": null,
+      "switch2": null,
       "switch": null,
       "android": null
     },
-    "tags": [
-      "fps",
-      "shooter",
-      "action"
-    ]
+    "tags": [],
+    "last_updated": "2026-01-21"
   },
   {
-    "id": "sims4",
-    "title": "The Sims 4",
+    "id": "489830",
+    "title": "The Elder Scrolls V: Skyrim Special Edition",
     "sizes": {
-      "pc": 20,
-      "switch2": 18,
-      "switch": 15,
-      "android": null
-    },
-    "tags": [
-      "simulation",
-      "casual"
-    ]
-  },
-  {
-    "id": "witcher3",
-    "title": "The Witcher 3: Wild Hunt",
-    "sizes": {
-      "pc": 50,
-      "switch2": 40,
-      "switch": 32,
-      "android": null
-    },
-    "tags": [
-      "rpg",
-      "fantasy",
-      "story"
-    ]
-  },
-  {
-    "id": "vrchat",
-    "title": "VRChat",
-    "sizes": {
-      "pc": 10,
+      "pc": 12.0,
       "switch2": null,
       "switch": null,
       "android": null
     },
     "tags": [
-      "social",
-      "vr"
-    ]
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
   },
   {
-    "id": "warframe",
-    "title": "Warframe",
+    "id": "242760",
+    "title": "The Forest",
     "sizes": {
-      "pc": 40,
-      "switch2": 35,
-      "switch": 17,
+      "pc": 5.0,
+      "switch2": null,
+      "switch": 3.513,
       "android": null
     },
     "tags": [
-      "scifi",
-      "looter",
-      "shooter"
-    ]
+      "Action",
+      "Adventure",
+      "Indie",
+      "Simulation"
+    ],
+    "last_updated": "2026-01-21"
   },
   {
-    "id": "wuthering",
-    "title": "Wuthering Waves",
+    "id": "303310",
+    "title": "The House in Fata Morgana",
     "sizes": {
-      "pc": 30,
-      "switch2": 25,
+      "pc": 1.0,
+      "switch2": null,
+      "switch": 3.215,
+      "android": null
+    },
+    "tags": [
+      "Adventure"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "the_legend_of_zelda:_breath_of_the_wild",
+    "title": "The Legend of Zelda: Breath of the Wild",
+    "sizes": {
+      "pc": null,
+      "switch2": 14.416,
+      "switch": 14.416,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "the_legend_of_zelda_link\u2019s_awakening",
+    "title": "The Legend of Zelda: Link\u2019s Awakening",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 5.892,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "the_legend_of_zelda:_tears_of_the_kingdom",
+    "title": "The Legend of Zelda: Tears of the Kingdom",
+    "sizes": {
+      "pc": null,
+      "switch2": 16.474,
+      "switch": 16.474,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1222670",
+    "title": "The Sims 4",
+    "sizes": {
+      "pc": 51.0,
+      "switch2": null,
       "switch": null,
       "android": null
     },
     "tags": [
-      "gacha",
-      "rpg",
-      "anime"
-    ]
+      "Adventure",
+      "Casual",
+      "Simulation",
+      "Free To Play"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "292030",
+    "title": "The Witcher 3: Wild Hunt",
+    "sizes": {
+      "pc": 50.0,
+      "switch2": null,
+      "switch": 24.319,
+      "android": null
+    },
+    "tags": [
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "359550",
+    "title": "Tom Clancy\u2019s Rainbow Six Siege",
+    "sizes": {
+      "pc": 65.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Free To Play"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "2395210",
+    "title": "Tony Hawk\u2019s Pro Skater 1+2",
+    "sizes": {
+      "pc": 24.0,
+      "switch2": null,
+      "switch": 12.27,
+      "android": null
+    },
+    "tags": [
+      "Sports"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "779340",
+    "title": "Total War: Three Kingdoms",
+    "sizes": {
+      "pc": 60.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Strategy"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1142710",
+    "title": "Total War: Warhammer III",
+    "sizes": {
+      "pc": 120.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Strategy"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "391540",
+    "title": "Undertale",
+    "sizes": {
+      "pc": 3.0,
+      "switch2": null,
+      "switch": 0.21,
+      "android": null
+    },
+    "tags": [
+      "Indie",
+      "RPG"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "837470",
+    "title": "Untitled Goose Game",
+    "sizes": {
+      "pc": 0.81,
+      "switch2": null,
+      "switch": 1.138,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Indie"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "1604030",
+    "title": "V Rising",
+    "sizes": {
+      "pc": 19.0,
+      "switch2": null,
+      "switch": 0.34,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "Massively Multiplayer"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "892970",
+    "title": "Valheim",
+    "sizes": {
+      "pc": 16.0,
+      "switch2": null,
+      "switch": null,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Early Access"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "230410",
+    "title": "Warframe",
+    "sizes": {
+      "pc": 50.0,
+      "switch2": null,
+      "switch": 21.646,
+      "android": null
+    },
+    "tags": [
+      "Action",
+      "RPG",
+      "Free To Play"
+    ],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "warhammer_40k_shootas,_blood_&_teef",
+    "title": "Warhammer 40K: Shootas, Blood & Teef",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 2.205,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "xenoblade_chronicles_2",
+    "title": "Xenoblade Chronicles 2",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 13.196,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "xenoblade_chronicles_3",
+    "title": "Xenoblade Chronicles 3",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 14.362,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "xenoblade_chronicles_definitive_edition",
+    "title": "Xenoblade Chronicles Definitive Edition",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 13.718,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
+  },
+  {
+    "id": "yoshi\u2019s_crafted_world",
+    "title": "Yoshi\u2019s Crafted World",
+    "sizes": {
+      "pc": null,
+      "switch2": null,
+      "switch": 5.607,
+      "android": null
+    },
+    "tags": [],
+    "last_updated": "2026-01-21"
   }
 ]
