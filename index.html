@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S7681MPCDK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-S7681MPCDK');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7681MPCDK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-S7681MPCDK');
+    </script>
+    
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -278,7 +277,7 @@
     // GLOBAL STATE
     let db = { games: [], devices: [], products: {} };
     let state = { selectedGames: new Set(), device: null };
-    let searchTimeout; // NEW: Timer for search tracking
+    let searchTimeout; 
 
     // INIT
     async function init() {
@@ -370,32 +369,33 @@
         grid.innerHTML = '';
         const term = document.getElementById('searchInput').value.toLowerCase();
         
-       // Determine size key
-let sizeKey = 'pc'; // Default for Windows/Linux PC handhelds
+        // --- 1. DETERMINE WHICH COLUMN TO USE (PC / SWITCH / ANDROID) ---
+        let sizeKey = 'pc'; // Default for Windows/Linux PC handhelds
 
-if (state.device.category === 'Nintendo') {
-    if (state.device.id === 'switch2') sizeKey = 'switch2';
-    else sizeKey = 'switch';
-} 
-// Check for Android-based categories or IDs
-else if (
-    state.device.category.includes('Android') || 
-    state.device.category.includes('Retroid') || 
-    state.device.category.includes('Anbernic') ||
-    state.device.id.includes('pocket') ||
-    state.device.id.includes('odin')
-) {
-    sizeKey = 'android';
-}
-
-// Fallback: If Switch 2 size is missing, use Switch 1 size
-let size = g.sizes[sizeKey];
-if (sizeKey === 'switch2' && size === null) {
-    size = g.sizes['switch'];
-}
+        if (state.device.category === 'Nintendo') {
+            if (state.device.id === 'switch2') sizeKey = 'switch2';
+            else sizeKey = 'switch';
+        } 
+        // Check for Android-based categories or IDs
+        else if (
+            state.device.category.includes('Android') || 
+            state.device.category.includes('Retroid') || 
+            state.device.category.includes('Anbernic') ||
+            state.device.id.includes('pocket') ||
+            state.device.id.includes('odin')
+        ) {
+            sizeKey = 'android';
+        }
 
         const filtered = db.games.filter(g => {
-            if (g.sizes[sizeKey] === null) return false;
+            // --- 2. FALLBACK LOGIC IS INSIDE THE FILTER LOOP NOW ---
+            // If we are looking for Switch 2 size, but it is null, try Switch 1 size
+            let sizeToCheck = g.sizes[sizeKey];
+            if (sizeKey === 'switch2' && sizeToCheck === null) {
+                sizeToCheck = g.sizes['switch'];
+            }
+
+            if (sizeToCheck === null) return false;
             return g.title.toLowerCase().includes(term);
         });
 
@@ -403,7 +403,12 @@ if (sizeKey === 'switch2' && size === null) {
         const toShow = term ? filtered : filtered.slice(0, 12);
 
         toShow.forEach(g => {
-            const size = g.sizes[sizeKey];
+            // --- 3. APPLY FALLBACK AGAIN FOR DISPLAY ---
+            let size = g.sizes[sizeKey];
+            if (sizeKey === 'switch2' && size === null) {
+                size = g.sizes['switch'];
+            }
+
             const el = document.createElement('div');
             el.className = `game-card ${state.selectedGames.has(g.id) ? 'selected' : ''}`;
             el.innerHTML = `<span class="game-title">${g.title}</span><span class="game-size">${size} GB</span>`;
@@ -419,32 +424,36 @@ if (sizeKey === 'switch2' && size === null) {
 
     function calculate() {
         let total = 0;
-       // Determine size key
-let sizeKey = 'pc'; // Default for Windows/Linux PC handhelds
+        
+        // --- 1. DETERMINE SIZE KEY AGAIN ---
+        let sizeKey = 'pc'; 
 
-if (state.device.category === 'Nintendo') {
-    if (state.device.id === 'switch2') sizeKey = 'switch2';
-    else sizeKey = 'switch';
-} 
-// Check for Android-based categories or IDs
-else if (
-    state.device.category.includes('Android') || 
-    state.device.category.includes('Retroid') || 
-    state.device.category.includes('Anbernic') ||
-    state.device.id.includes('pocket') ||
-    state.device.id.includes('odin')
-) {
-    sizeKey = 'android';
-}
+        if (state.device.category === 'Nintendo') {
+            if (state.device.id === 'switch2') sizeKey = 'switch2';
+            else sizeKey = 'switch';
+        } 
+        else if (
+            state.device.category.includes('Android') || 
+            state.device.category.includes('Retroid') || 
+            state.device.category.includes('Anbernic') ||
+            state.device.id.includes('pocket') ||
+            state.device.id.includes('odin')
+        ) {
+            sizeKey = 'android';
+        }
 
-// Fallback: If Switch 2 size is missing, use Switch 1 size
-let size = g.sizes[sizeKey];
-if (sizeKey === 'switch2' && size === null) {
-    size = g.sizes['switch'];
-}
         state.selectedGames.forEach(id => {
             const g = db.games.find(x => x.id === id);
-            if(g) total += g.sizes[sizeKey];
+            if(g) {
+                // --- 2. APPLY FALLBACK LOGIC INSIDE THE CALC LOOP ---
+                let size = g.sizes[sizeKey];
+                if (sizeKey === 'switch2' && size === null) {
+                    size = g.sizes['switch'];
+                }
+                
+                // Add to total (Use 0 if still null to prevent NaN errors)
+                if (size) total += size;
+            }
         });
 
         document.querySelectorAll('.retro-input').forEach(i => {
