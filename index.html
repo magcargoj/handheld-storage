@@ -370,10 +370,29 @@
         grid.innerHTML = '';
         const term = document.getElementById('searchInput').value.toLowerCase();
         
-        let sizeKey = 'pc';
-        if (state.device.id.includes('switch2')) sizeKey = 'switch2';
-        else if (state.device.id.includes('switch')) sizeKey = 'switch';
-        else if (state.device.category.includes('Android') || state.device.id === 'retroid' || state.device.id === 'odin2') sizeKey = 'android';
+       // Determine size key
+let sizeKey = 'pc'; // Default for Windows/Linux PC handhelds
+
+if (state.device.category === 'Nintendo') {
+    if (state.device.id === 'switch2') sizeKey = 'switch2';
+    else sizeKey = 'switch';
+} 
+// Check for Android-based categories or IDs
+else if (
+    state.device.category.includes('Android') || 
+    state.device.category.includes('Retroid') || 
+    state.device.category.includes('Anbernic') ||
+    state.device.id.includes('pocket') ||
+    state.device.id.includes('odin')
+) {
+    sizeKey = 'android';
+}
+
+// Fallback: If Switch 2 size is missing, use Switch 1 size
+let size = g.sizes[sizeKey];
+if (sizeKey === 'switch2' && size === null) {
+    size = g.sizes['switch'];
+}
 
         const filtered = db.games.filter(g => {
             if (g.sizes[sizeKey] === null) return false;
@@ -400,11 +419,29 @@
 
     function calculate() {
         let total = 0;
-        let sizeKey = 'pc';
-        if (state.device.id.includes('switch2')) sizeKey = 'switch2';
-        else if (state.device.id.includes('switch')) sizeKey = 'switch';
-        else if (state.device.category.includes('Android') || state.device.id === 'retroid' || state.device.id === 'odin2') sizeKey = 'android';
+       // Determine size key
+let sizeKey = 'pc'; // Default for Windows/Linux PC handhelds
 
+if (state.device.category === 'Nintendo') {
+    if (state.device.id === 'switch2') sizeKey = 'switch2';
+    else sizeKey = 'switch';
+} 
+// Check for Android-based categories or IDs
+else if (
+    state.device.category.includes('Android') || 
+    state.device.category.includes('Retroid') || 
+    state.device.category.includes('Anbernic') ||
+    state.device.id.includes('pocket') ||
+    state.device.id.includes('odin')
+) {
+    sizeKey = 'android';
+}
+
+// Fallback: If Switch 2 size is missing, use Switch 1 size
+let size = g.sizes[sizeKey];
+if (sizeKey === 'switch2' && size === null) {
+    size = g.sizes['switch'];
+}
         state.selectedGames.forEach(id => {
             const g = db.games.find(x => x.id === id);
             if(g) total += g.sizes[sizeKey];
