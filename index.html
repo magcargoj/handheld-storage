@@ -368,9 +368,16 @@
             db.products = p;
             
             populateDeviceSelect();
-            renderGames();
-            renderStaticDeals(); // <--- FIXED: ADDED THIS CALL
             
+            // Set initial device
+            state.device = db.devices[0];
+            
+            // RENDER UI
+            renderGames();
+            renderStaticDeals(); 
+            updateSwitchWarning(); // <--- FIXED: Runs immediately on load now
+            calculate();
+
             // Listeners
             document.getElementById('deviceSelect').addEventListener('change', onDeviceChange);
             
@@ -391,10 +398,6 @@
             });
 
             document.querySelectorAll('.retro-input').forEach(el => el.addEventListener('input', calculate));
-            
-            // Set initial
-            state.device = db.devices[0];
-            calculate();
 
         } catch (e) {
             document.querySelector('h1').innerText = "Error Loading Data Files";
@@ -405,11 +408,17 @@
     // --- NEW FUNCTION: STATIC DEALS ---
     function renderStaticDeals() {
         const box = document.getElementById('staticDeals');
-        // Customize which category shows up here. Defaulting to UHS-I (Steam Deck/Switch 1)
-        // Make sure 'uhs1' exists in your products.json, otherwise change to 'sd' or whatever key you use
-        const products = (db.products['uhs1'] || db.products['sd'] || []).slice(2, 5); 
         
-        if (!products.length) return;
+        // Try to find 'uhs1' or fallback to the first category available
+        let category = db.products['uhs1'] ? db.products['uhs1'] : Object.values(db.products)[0];
+        
+        if (!category || category.length === 0) {
+            box.innerHTML = '<p style="padding:10px; color:#94a3b8">Loading deals...</p>';
+            return;
+        }
+
+        // Slice safely (if array is small, just take what exists)
+        const products = category.length > 3 ? category.slice(1, 4) : category;
 
         let html = products.map(p => `
             <a href="${p.link}" target="_blank" class="deal-card">
@@ -443,7 +452,6 @@
             });
             sel.appendChild(group);
         }
-        state.device = db.devices[0];
     }
 
     function onDeviceChange(e) {
@@ -451,11 +459,24 @@
         state.selectedGames.clear(); 
         document.querySelectorAll('.retro-input').forEach(i => i.value = '');
         
-        // --- SWITCH 2 LOGIC ---
+        updateSwitchWarning(); // Check if we need to show the warning
+        renderGames();
+        
+        // Only run standard calc if NOT switch 2 (since Switch 2 has its own specific warning)
+        if(state.device.id !== 'switch2') {
+             calculate(); 
+        } else {
+             // If Switch 2, ensure the "Required" text stays visible
+             document.getElementById('totalDisplay').innerHTML = `⚠️ <span style="font-size:1rem; color:var(--warning)">Required</span>`;
+        }
+    }
+
+    // --- HELPER: SWITCH 2 WARNING ---
+    function updateSwitchWarning() {
         const dock = document.getElementById('resultDock');
         const recText = document.getElementById('recText');
         const btnBox = document.getElementById('recButtons');
-        
+
         if (state.device.id === 'switch2') {
             dock.classList.remove('hidden');
             document.getElementById('totalDisplay').innerHTML = `⚠️ <span style="font-size:1rem; color:var(--warning)">Required</span>`;
@@ -463,17 +484,16 @@
             
             const expressCards = db.products['express'] || [];
             if(expressCards.length > 0) {
-                const card = expressCards[1] || expressCards[0]; 
+                // Recommend the 512GB (middle option) if available, else the first one
+                const card = expressCards.length > 1 ? expressCards[1] : expressCards[0]; 
                 btnBox.innerHTML = `<a href="${card.link}" target="_blank" class="btn btn-ssd" style="background:var(--primary)">
                     ${card.name}<small>Essential for Switch 2</small>
                 </a>`;
             }
         } else {
+            // If not Switch 2, hide the dock initially until they calculate
             dock.classList.add('hidden');
         }
-
-        renderGames();
-        if(state.device.id !== 'switch2') calculate(); 
     }
 
     function renderGames() {
@@ -528,12 +548,14 @@
     }
 
     function calculate() {
+        // If we are on Switch 2, don't override the warning with a standard calculation
+        if(state.device.id === 'switch2') return;
+
         let total = 0;
         
         let sizeKey = 'pc'; 
         if (state.device.category === 'Nintendo') {
-            if (state.device.id === 'switch2') sizeKey = 'switch2';
-            else sizeKey = 'switch';
+             sizeKey = 'switch'; // Switch 2 handled above, so this is just Switch 1
         } 
         else if (
             state.device.category.includes('Android') || 
@@ -549,9 +571,8 @@
             const g = db.games.find(x => x.id === id);
             if(g) {
                 let size = g.sizes[sizeKey];
-                if (sizeKey === 'switch2' && size === null) {
-                    size = g.sizes['switch'];
-                }
+                // Fallback shouldn't be needed for non-Switch 2, but keeping safety
+                if (sizeKey === 'switch2' && size === null) size = g.sizes['switch'];
                 if (size) total += size;
             }
         });
@@ -591,7 +612,6 @@
 
         // --- RECOMMENDATION LOGIC ---
         if (state.device.ssd_type) {
-            // FIXED: I RESTORED YOUR MISSING SSD LOGIC HERE
             if (total > MAX_SD_SIZE) {
                 recText.innerHTML = `⚠️ <strong>Limit Reached!</strong> You cannot fit this on a MicroSD card. You MUST upgrade your SSD.`;
                 if(bestSSD) html += `<a href="${bestSSD.link}" target="_blank" class="btn btn-ssd">${bestSSD.name}<small>Internal Upgrade</small></a>`;
@@ -608,7 +628,6 @@
             }
         } 
         else {
-            // === NEW SMART UPSELL LOGIC FOR NON-SSD DEVICES ===
             if (total > MAX_SD_SIZE) {
                 recText.innerHTML = `⚠️ <strong>Too Big!</strong> You will need multiple MicroSD cards.`;
                 html += `<a href="${bestSD.link}" target="_blank" class="btn btn-sd">${bestSD.name}<small>Buy Card #1</small></a>`;
