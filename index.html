@@ -369,13 +369,13 @@
             
             populateDeviceSelect();
             
-            // Set initial device
+            // Set initial device (Default)
             state.device = db.devices[0];
             
             // RENDER UI
             renderGames();
-            renderStaticDeals(); 
-            updateSwitchWarning(); // <--- FIXED: Runs immediately on load now
+            renderStaticDeals(); // <--- Now uses the default device's type
+            updateSwitchWarning(); 
             calculate();
 
             // Listeners
@@ -405,24 +405,34 @@
         }
     }
 
-    // --- NEW FUNCTION: STATIC DEALS ---
+    // --- UPDATED: DYNAMIC DEALS SECTION ---
     function renderStaticDeals() {
         const box = document.getElementById('staticDeals');
         
-        // Try to find 'uhs1' or fallback to the first category available
-        let category = db.products['uhs1'] ? db.products['uhs1'] : Object.values(db.products)[0];
+        // 1. Get the correct SD card type for the CURRENT device
+        // (e.g., 'express' for Switch 2, 'uhs1' for Steam Deck)
+        const type = state.device ? state.device.sd_type : 'uhs1';
+        
+        // 2. Fetch the specific list from products.json
+        let category = db.products[type];
         
         if (!category || category.length === 0) {
-            box.innerHTML = '<p style="padding:10px; color:#94a3b8">Loading deals...</p>';
+            box.innerHTML = '<p style="padding:10px; color:#94a3b8">No specific deals found for this device.</p>';
             return;
         }
 
-        // Slice safely (if array is small, just take what exists)
-        const products = category.length > 3 ? category.slice(1, 4) : category;
+        // 3. Pick 3 items to show (try to get 256GB, 512GB, 1TB range if possible)
+        // If the list is short, just show what we have.
+        const products = category.length > 3 ? category.slice(0, 3) : category;
+
+        // 4. Update the "Editor's Picks" Title based on speed
+        // Optional: You could update the H3 title here if you wanted, but keeping it simple.
 
         let html = products.map(p => `
             <a href="${p.link}" target="_blank" class="deal-card">
-                <span class="deal-tag">Best Value</span>
+                <span class="deal-tag" style="background:${type === 'express' ? 'var(--danger)' : 'var(--warning)'}">
+                    ${type === 'express' ? 'High Speed' : 'Best Value'}
+                </span>
                 <div style="font-weight:bold; margin-top:5px; font-size:1.1rem;">${p.cap}GB</div>
                 <div style="font-size:0.85rem; color:#cbd5e1;">${p.name}</div>
                 <div style="margin-top:8px; color:var(--accent); font-weight:600;">Check Price &rarr;</div>
@@ -459,19 +469,19 @@
         state.selectedGames.clear(); 
         document.querySelectorAll('.retro-input').forEach(i => i.value = '');
         
-        updateSwitchWarning(); // Check if we need to show the warning
+        // --- NEW: RE-RENDER DEALS WHEN DEVICE CHANGES ---
+        renderStaticDeals(); 
+        
+        updateSwitchWarning(); 
         renderGames();
         
-        // Only run standard calc if NOT switch 2 (since Switch 2 has its own specific warning)
         if(state.device.id !== 'switch2') {
              calculate(); 
         } else {
-             // If Switch 2, ensure the "Required" text stays visible
              document.getElementById('totalDisplay').innerHTML = `⚠️ <span style="font-size:1rem; color:var(--warning)">Required</span>`;
         }
     }
 
-    // --- HELPER: SWITCH 2 WARNING ---
     function updateSwitchWarning() {
         const dock = document.getElementById('resultDock');
         const recText = document.getElementById('recText');
@@ -484,14 +494,12 @@
             
             const expressCards = db.products['express'] || [];
             if(expressCards.length > 0) {
-                // Recommend the 512GB (middle option) if available, else the first one
                 const card = expressCards.length > 1 ? expressCards[1] : expressCards[0]; 
                 btnBox.innerHTML = `<a href="${card.link}" target="_blank" class="btn btn-ssd" style="background:var(--primary)">
                     ${card.name}<small>Essential for Switch 2</small>
                 </a>`;
             }
         } else {
-            // If not Switch 2, hide the dock initially until they calculate
             dock.classList.add('hidden');
         }
     }
@@ -548,14 +556,13 @@
     }
 
     function calculate() {
-        // If we are on Switch 2, don't override the warning with a standard calculation
         if(state.device.id === 'switch2') return;
 
         let total = 0;
         
         let sizeKey = 'pc'; 
         if (state.device.category === 'Nintendo') {
-             sizeKey = 'switch'; // Switch 2 handled above, so this is just Switch 1
+             sizeKey = 'switch'; 
         } 
         else if (
             state.device.category.includes('Android') || 
@@ -571,7 +578,6 @@
             const g = db.games.find(x => x.id === id);
             if(g) {
                 let size = g.sizes[sizeKey];
-                // Fallback shouldn't be needed for non-Switch 2, but keeping safety
                 if (sizeKey === 'switch2' && size === null) size = g.sizes['switch'];
                 if (size) total += size;
             }
