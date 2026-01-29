@@ -158,7 +158,37 @@
         summary::after { content: '+'; position: absolute; right: 20px; font-weight: bold; color: var(--accent); }
         details[open] summary::after { content: '-'; }
         .faq-answer { padding: 0 15px 15px 15px; color: #94a3b8; font-size: 0.95rem; }
-
+/* Deals Box */
+.deals-box {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));
+    border: 1px solid var(--primary);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.15);
+}
+.deals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+.deal-card {
+    background: var(--bg);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    transition: transform 0.2s;
+    text-decoration: none;
+    color: var(--text);
+    display: block;
+}
+.deal-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+.deal-tag { 
+    background: var(--warning); color: #000; font-weight: 800; 
+    font-size: 0.7rem; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; 
+}
         @media (max-width: 600px) {
             .retro-box { grid-template-columns: 1fr; }
             .dock-inner { flex-direction: column; align-items: stretch; }
@@ -177,7 +207,12 @@
         <label>1. Select Device</label>
         <select id="deviceSelect"><option>Loading devices...</option></select>
     </div>
-
+<div class="deals-box">
+    <h3 style="margin:0 0 10px 0; color:white;">🔥 Editor's Top Storage Picks</h3>
+    <p style="font-size:0.9rem; color:#94a3b8; margin:0;">Don't want to calculate? These are the best value cards right now.</p>
+    <div class="deals-grid" id="staticDeals">
+        </div>
+</div>
     <div style="margin-bottom: 30px;">
         <label>2. Add Modern Games</label>
         <input type="text" id="searchInput" placeholder="Search games to display more...">
@@ -398,12 +433,39 @@
     }
 
     function onDeviceChange(e) {
-        state.device = db.devices.find(d => d.id === e.target.value);
-        state.selectedGames.clear(); 
-        document.querySelectorAll('.retro-input').forEach(i => i.value = '');
-        renderGames();
-        calculate();
+    state.device = db.devices.find(d => d.id === e.target.value);
+    state.selectedGames.clear(); 
+    document.querySelectorAll('.retro-input').forEach(i => i.value = '');
+    
+    // --- NEW LOGIC START ---
+    const dock = document.getElementById('resultDock');
+    const recText = document.getElementById('recText');
+    const btnBox = document.getElementById('recButtons');
+    
+    if (state.device.id === 'switch2') {
+        // Force the dock open immediately
+        dock.classList.remove('hidden');
+        document.getElementById('totalDisplay').innerHTML = `⚠️ <span style="font-size:1rem; color:var(--warning)">Required</span>`;
+        recText.innerHTML = `<strong>Switch 2 Requirement:</strong> You MUST use MicroSD Express. Standard cards will be too slow.`;
+        
+        // Find Express cards from products.json
+        const expressCards = db.products['express'] || [];
+        if(expressCards.length > 0) {
+            // Show the middle option (usually 512GB) or first
+            const card = expressCards[1] || expressCards[0]; 
+            btnBox.innerHTML = `<a href="${card.link}" target="_blank" class="btn btn-ssd" style="background:var(--primary)">
+                ${card.name}<small>Essential for Switch 2</small>
+            </a>`;
+        }
+    } else {
+        // Hide dock if switching away from Switch 2 until they calc again
+        dock.classList.add('hidden');
     }
+    // --- NEW LOGIC END ---
+
+    renderGames();
+    if(state.device.id !== 'switch2') calculate(); // Don't auto-calc for Switch 2 yet, let the warning sit
+}
 
     function renderGames() {
         const grid = document.getElementById('gameGrid');
@@ -531,33 +593,55 @@
         }
 
         if (state.device.ssd_type) {
-            if (total > MAX_SD_SIZE) {
-                recText.innerHTML = `⚠️ <strong>Limit Reached!</strong> You cannot fit this on a MicroSD card. You MUST upgrade your SSD.`;
-                if(bestSSD) html += `<a href="${bestSSD.link}" target="_blank" class="btn btn-ssd">${bestSSD.name}<small>Internal Upgrade</small></a>`;
-                else html += `<div class="btn btn-ssd" style="opacity:0.6; cursor:default;">No SSD Large Enough</div>`;
-            } 
-            else if (total > 800) {
-                recText.innerHTML = `🔥 <strong>Power User!</strong> For ${total}GB, we highly recommend an SSD upgrade.`;
-                if(bestSSD) html += `<a href="${bestSSD.link}" target="_blank" class="btn btn-ssd">${bestSSD.name}<small>Internal Upgrade</small></a>`;
-                html += `<a href="${bestSD.link}" target="_blank" class="btn btn-sd">${bestSD.name}<small>MicroSD Backup</small></a>`;
+    // ... keep your existing SSD logic ...
+} else {
+    // === NEW SMART UPSELL LOGIC ===
+    if (total > MAX_SD_SIZE) {
+        recText.innerHTML = `⚠️ <strong>Too Big!</strong> You will need multiple MicroSD cards.`;
+        html += `<a href="${bestSD.link}" target="_blank" class="btn btn-sd">${bestSD.name}<small>Buy Card #1</small></a>`;
+    } else {
+        // Check if the user is "too close" to the limit (85% full)
+        // bestSD is the card that technically fits (e.g. 512GB for 450GB data)
+        const safetyThreshold = bestSD.cap * 0.85;
+        
+        if (total > safetyThreshold) {
+            // Find the NEXT size up
+            const upgradeCard = sdProducts.find(p => p.cap > bestSD.cap);
+            
+            if (upgradeCard) {
+                recText.innerHTML = `⚠️ <strong>Storage Warning:</strong> ${total}GB will fill a ${bestSD.cap}GB card. <strong>Go bigger.</strong>`;
+                html += `<a href="${upgradeCard.link}" target="_blank" class="btn btn-sd" style="border: 2px solid var(--danger)">
+                    ${upgradeCard.name}<small>Safe Choice (Upgrade)</small>
+                </a>`;
             } else {
-                recText.innerHTML = `You can fit this on a MicroSD, but an SSD is faster.`;
-                html += `<a href="${bestSD.link}" target="_blank" class="btn btn-sd">${bestSD.name}<small>Best Value</small></a>`;
-                if(bestSSD) html += `<a href="${bestSSD.link}" target="_blank" class="btn btn-ssd" style="opacity:0.6">${bestSSD.name}<small>Faster Option</small></a>`;
-            }
-        } 
-        else {
-            if (total > MAX_SD_SIZE) {
-                recText.innerHTML = `⚠️ <strong>Too Big!</strong> You will need multiple MicroSD cards.`;
-                html += `<a href="${bestSD.link}" target="_blank" class="btn btn-sd">${bestSD.name}<small>Buy Card #1</small></a>`;
-                html += `<a href="${bestSD.link}" target="_blank" class="btn btn-sd" style="opacity:0.8">${bestSD.name}<small>Buy Card #2</small></a>`;
-            } else {
+                // No upgrade available (e.g. at 1.5TB), just show the best fit
                 recText.innerHTML = `Recommended Card for <strong>${state.device.label}</strong>:`;
-                if(bestSD) html += `<a href="${bestSD.link}" target="_blank" class="btn btn-sd">${bestSD.name}<small>View on Amazon</small></a>`;
+                html += `<a href="${bestSD.link}" target="_blank" class="btn btn-sd">${bestSD.name}<small>View on Amazon</small></a>`;
             }
+        } else {
+            // Standard recommendation
+            recText.innerHTML = `Recommended Card for <strong>${state.device.label}</strong>:`;
+            html += `<a href="${bestSD.link}" target="_blank" class="btn btn-sd">${bestSD.name}<small>View on Amazon</small></a>`;
         }
+    }
+}
 
         btnBox.innerHTML = html;
+        function renderStaticDeals() {
+    const box = document.getElementById('staticDeals');
+    // You can customize which category shows up here. Defaulting to UHS-I (Steam Deck/Switch 1)
+    const products = db.products['uhs1'].slice(2, 5); // Grabs 256GB, 512GB, 1TB
+    
+    let html = products.map(p => `
+        <a href="${p.link}" target="_blank" class="deal-card">
+            <span class="deal-tag">Best Value</span>
+            <div style="font-weight:bold; margin-top:5px; font-size:1.1rem;">${p.cap}GB</div>
+            <div style="font-size:0.85rem; color:#cbd5e1;">${p.name}</div>
+            <div style="margin-top:8px; color:var(--accent); font-weight:600;">Check Price &rarr;</div>
+        </a>
+    `).join('');
+    box.innerHTML = html;
+}
     }
 
     init();
